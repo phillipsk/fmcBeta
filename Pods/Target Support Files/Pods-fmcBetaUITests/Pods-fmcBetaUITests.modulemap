@@ -1,0 +1,6 @@
+framework module Pods_fmcBetaUITests {
+  umbrella header "Pods-fmcBetaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

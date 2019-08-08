@@ -7,14 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47E8F330E814F68261B267CB /* Pods_fmcBetaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7453D9D1FC39F0E9A53ABBB0 /* Pods_fmcBetaTests.framework */; };
+		593E24BAD6292A3CAC47D51E /* Pods_fmcBetaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98C70BFEFF38AD39E87A742 /* Pods_fmcBetaUITests.framework */; };
+		968B613E38BE55E448802EC3 /* Pods_fmcBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BA46734B1C52F3A2D1AC28 /* Pods_fmcBeta.framework */; };
+		AB03481322A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
+		AB03481422A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
+		AB03481522A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
+		AB03481722A98E9D00A86E85 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481622A98E9D00A86E85 /* ComposeViewController.swift */; };
+		AB03481822A98E9D00A86E85 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481622A98E9D00A86E85 /* ComposeViewController.swift */; };
+		AB03481922A98E9D00A86E85 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481622A98E9D00A86E85 /* ComposeViewController.swift */; };
+		AB14B21F22D79095006AFFE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */; };
+		AB14B22022D79095006AFFE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */; };
+		AB14B22122D79095006AFFE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */; };
+		AB14B22722D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */; };
+		AB14B22822D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */; };
+		AB14B22922D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */; };
+		AB1714A622F3DD720092593C /* PrayerWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714A522F3DD720092593C /* PrayerWallViewController.swift */; };
+		AB1714A722F3DD720092593C /* PrayerWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714A522F3DD720092593C /* PrayerWallViewController.swift */; };
+		AB1714A822F3DD720092593C /* PrayerWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714A522F3DD720092593C /* PrayerWallViewController.swift */; };
+		AB1714AA22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714A922F3DD990092593C /* PrayerWallPostViewController.swift */; };
+		AB1714AB22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714A922F3DD990092593C /* PrayerWallPostViewController.swift */; };
+		AB1714AC22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714A922F3DD990092593C /* PrayerWallPostViewController.swift */; };
+		AB1714AE22F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714AD22F3DDCF0092593C /* PrayerWallTableViewCell.swift */; };
+		AB1714AF22F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714AD22F3DDCF0092593C /* PrayerWallTableViewCell.swift */; };
+		AB1714B022F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1714AD22F3DDCF0092593C /* PrayerWallTableViewCell.swift */; };
+		AB1D72C622F28390009258A5 /* ChurchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D72C522F28390009258A5 /* ChurchInfoViewController.swift */; };
+		AB1D72C722F28390009258A5 /* ChurchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D72C522F28390009258A5 /* ChurchInfoViewController.swift */; };
+		AB1D72C822F28390009258A5 /* ChurchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D72C522F28390009258A5 /* ChurchInfoViewController.swift */; };
+		AB41084922E15B9B00511D0C /* Date Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41084822E15B9B00511D0C /* Date Model.swift */; };
+		AB41084A22E15B9B00511D0C /* Date Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41084822E15B9B00511D0C /* Date Model.swift */; };
+		AB41084B22E15B9B00511D0C /* Date Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41084822E15B9B00511D0C /* Date Model.swift */; };
+		AB466AD522F0C441001D2BAD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB466AD422F0C441001D2BAD /* AudioToolbox.framework */; };
+		AB7038B822EF92A9002FB188 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7038B722EF92A9002FB188 /* SignInViewController.swift */; };
+		AB7038B922EF92A9002FB188 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7038B722EF92A9002FB188 /* SignInViewController.swift */; };
+		AB7038BA22EF92A9002FB188 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7038B722EF92A9002FB188 /* SignInViewController.swift */; };
+		AB7038BC22F01E28002FB188 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7038BB22F01E28002FB188 /* FirebaseAuth.framework */; };
+		AB7038BE22F01E5F002FB188 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7038BD22F01E5F002FB188 /* FirebaseCore.framework */; };
 		AB8361CD22A077BE0049DA07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8361CC22A077BE0049DA07 /* AppDelegate.swift */; };
-		AB8361CF22A077BE0049DA07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8361CE22A077BE0049DA07 /* ViewController.swift */; };
 		AB8361D222A077BE0049DA07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8361D022A077BE0049DA07 /* Main.storyboard */; };
 		AB8361D522A077BE0049DA07 /* fmcBeta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB8361D322A077BE0049DA07 /* fmcBeta.xcdatamodeld */; };
 		AB8361D722A077BF0049DA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8361D622A077BF0049DA07 /* Assets.xcassets */; };
 		AB8361DA22A077BF0049DA07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8361D822A077BF0049DA07 /* LaunchScreen.storyboard */; };
 		AB8361E522A077BF0049DA07 /* fmcBetaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8361E422A077BF0049DA07 /* fmcBetaTests.swift */; };
 		AB8361F022A077BF0049DA07 /* fmcBetaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8361EF22A077BF0049DA07 /* fmcBetaUITests.swift */; };
+		ABA86C9E22D911C200EBC5EF /* AudioFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86C9D22D911C200EBC5EF /* AudioFeedTableViewCell.swift */; };
+		ABA86C9F22D911C200EBC5EF /* AudioFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86C9D22D911C200EBC5EF /* AudioFeedTableViewCell.swift */; };
+		ABA86CA022D911C200EBC5EF /* AudioFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86C9D22D911C200EBC5EF /* AudioFeedTableViewCell.swift */; };
+		ABA86CA222D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86CA122D911FA00EBC5EF /* Mp3FeedViewController.swift */; };
+		ABA86CA322D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86CA122D911FA00EBC5EF /* Mp3FeedViewController.swift */; };
+		ABA86CA422D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86CA122D911FA00EBC5EF /* Mp3FeedViewController.swift */; };
+		ABA86CA622D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86CA522D9324100EBC5EF /* AudioMgmtViewController.swift */; };
+		ABA86CA722D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86CA522D9324100EBC5EF /* AudioMgmtViewController.swift */; };
+		ABA86CA822D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA86CA522D9324100EBC5EF /* AudioMgmtViewController.swift */; };
+		ABDB50C422F7BC29002AB8A0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB50C322F7BC29002AB8A0 /* UserService.swift */; };
+		ABDB50C522F7BC29002AB8A0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB50C322F7BC29002AB8A0 /* UserService.swift */; };
+		ABDB50C622F7BC29002AB8A0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB50C322F7BC29002AB8A0 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +82,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04BA46734B1C52F3A2D1AC28 /* Pods_fmcBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fmcBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DCF852F778F2A873AA27066 /* Pods-fmcBetaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBetaUITests.debug.xcconfig"; path = "Target Support Files/Pods-fmcBetaUITests/Pods-fmcBetaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7118DBE3078DC1238203986F /* Pods-fmcBeta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBeta.debug.xcconfig"; path = "Target Support Files/Pods-fmcBeta/Pods-fmcBeta.debug.xcconfig"; sourceTree = "<group>"; };
+		7453D9D1FC39F0E9A53ABBB0 /* Pods_fmcBetaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fmcBetaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FC122C4B7C8D1F9B58A7E3 /* Pods-fmcBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBeta.release.xcconfig"; path = "Target Support Files/Pods-fmcBeta/Pods-fmcBeta.release.xcconfig"; sourceTree = "<group>"; };
+		9C4DDA53A8F9438032D3B6A4 /* Pods-fmcBetaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBetaUITests.release.xcconfig"; path = "Target Support Files/Pods-fmcBetaUITests/Pods-fmcBetaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AB03481222A98E8C00A86E85 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		AB03481622A98E9D00A86E85 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AB1714A522F3DD720092593C /* PrayerWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerWallViewController.swift; sourceTree = "<group>"; };
+		AB1714A922F3DD990092593C /* PrayerWallPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerWallPostViewController.swift; sourceTree = "<group>"; };
+		AB1714AD22F3DDCF0092593C /* PrayerWallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerWallTableViewCell.swift; sourceTree = "<group>"; };
+		AB1D72C522F28390009258A5 /* ChurchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchInfoViewController.swift; sourceTree = "<group>"; };
+		AB41084822E15B9B00511D0C /* Date Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Model.swift"; sourceTree = "<group>"; };
+		AB466AD422F0C441001D2BAD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AB466AD622F0C441001D2BAD /* fmcBeta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fmcBeta.entitlements; sourceTree = "<group>"; };
+		AB7038B722EF92A9002FB188 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		AB7038BB22F01E28002FB188 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB7038BD22F01E5F002FB188 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8361C922A077BE0049DA07 /* fmcBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fmcBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8361CC22A077BE0049DA07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB8361CE22A077BE0049DA07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB8361D122A077BE0049DA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB8361D422A077BE0049DA07 /* fmcBeta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fmcBeta.xcdatamodel; sourceTree = "<group>"; };
 		AB8361D622A077BF0049DA07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +115,13 @@
 		AB8361EB22A077BF0049DA07 /* fmcBetaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fmcBetaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8361EF22A077BF0049DA07 /* fmcBetaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fmcBetaUITests.swift; sourceTree = "<group>"; };
 		AB8361F122A077BF0049DA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABA86C9D22D911C200EBC5EF /* AudioFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFeedTableViewCell.swift; sourceTree = "<group>"; };
+		ABA86CA122D911FA00EBC5EF /* Mp3FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp3FeedViewController.swift; sourceTree = "<group>"; };
+		ABA86CA522D9324100EBC5EF /* AudioMgmtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMgmtViewController.swift; sourceTree = "<group>"; };
+		ABDB50C322F7BC29002AB8A0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B98C70BFEFF38AD39E87A742 /* Pods_fmcBetaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fmcBetaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C414C664DE322FD2368E483A /* Pods-fmcBetaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBetaTests.debug.xcconfig"; path = "Target Support Files/Pods-fmcBetaTests/Pods-fmcBetaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC258266B6DB6E4A43F4E787 /* Pods-fmcBetaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBetaTests.release.xcconfig"; path = "Target Support Files/Pods-fmcBetaTests/Pods-fmcBetaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +129,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7038BE22F01E5F002FB188 /* FirebaseCore.framework in Frameworks */,
+				AB7038BC22F01E28002FB188 /* FirebaseAuth.framework in Frameworks */,
+				968B613E38BE55E448802EC3 /* Pods_fmcBeta.framework in Frameworks */,
+				AB466AD522F0C441001D2BAD /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E8F330E814F68261B267CB /* Pods_fmcBetaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +148,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593E24BAD6292A3CAC47D51E /* Pods_fmcBetaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F4C9BD2357E0DCF90F2C646 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB466AD422F0C441001D2BAD /* AudioToolbox.framework */,
+				AB7038BD22F01E5F002FB188 /* FirebaseCore.framework */,
+				AB7038BB22F01E28002FB188 /* FirebaseAuth.framework */,
+				04BA46734B1C52F3A2D1AC28 /* Pods_fmcBeta.framework */,
+				7453D9D1FC39F0E9A53ABBB0 /* Pods_fmcBetaTests.framework */,
+				B98C70BFEFF38AD39E87A742 /* Pods_fmcBetaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F63207347BA7BE51288374A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7118DBE3078DC1238203986F /* Pods-fmcBeta.debug.xcconfig */,
+				94FC122C4B7C8D1F9B58A7E3 /* Pods-fmcBeta.release.xcconfig */,
+				C414C664DE322FD2368E483A /* Pods-fmcBetaTests.debug.xcconfig */,
+				FC258266B6DB6E4A43F4E787 /* Pods-fmcBetaTests.release.xcconfig */,
+				6DCF852F778F2A873AA27066 /* Pods-fmcBetaUITests.debug.xcconfig */,
+				9C4DDA53A8F9438032D3B6A4 /* Pods-fmcBetaUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB1D72BE22F28286009258A5 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB03481622A98E9D00A86E85 /* ComposeViewController.swift */,
+				AB7038B722EF92A9002FB188 /* SignInViewController.swift */,
+				AB1714A922F3DD990092593C /* PrayerWallPostViewController.swift */,
+				AB03481222A98E8C00A86E85 /* FeedViewController.swift */,
+				ABA86CA122D911FA00EBC5EF /* Mp3FeedViewController.swift */,
+				ABA86CA522D9324100EBC5EF /* AudioMgmtViewController.swift */,
+				AB1D72C522F28390009258A5 /* ChurchInfoViewController.swift */,
+				AB1714A522F3DD720092593C /* PrayerWallViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		AB1D72BF22F282A1009258A5 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */,
+				ABA86C9D22D911C200EBC5EF /* AudioFeedTableViewCell.swift */,
+				AB1714AD22F3DDCF0092593C /* PrayerWallTableViewCell.swift */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		AB1D72C022F282FB009258A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB41084822E15B9B00511D0C /* Date Model.swift */,
+				ABDB50C322F7BC29002AB8A0 /* UserService.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AB8361C022A077BE0049DA07 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +222,8 @@
 				AB8361E322A077BF0049DA07 /* fmcBetaTests */,
 				AB8361EE22A077BF0049DA07 /* fmcBetaUITests */,
 				AB8361CA22A077BE0049DA07 /* Products */,
+				5F63207347BA7BE51288374A /* Pods */,
+				1F4C9BD2357E0DCF90F2C646 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +240,16 @@
 		AB8361CB22A077BE0049DA07 /* fmcBeta */ = {
 			isa = PBXGroup;
 			children = (
+				AB466AD622F0C441001D2BAD /* fmcBeta.entitlements */,
 				AB8361CC22A077BE0049DA07 /* AppDelegate.swift */,
-				AB8361CE22A077BE0049DA07 /* ViewController.swift */,
 				AB8361D022A077BE0049DA07 /* Main.storyboard */,
+				AB1D72BF22F282A1009258A5 /* TableView Cells */,
+				AB1D72C022F282FB009258A5 /* Models */,
+				AB1D72BE22F28286009258A5 /* View controllers */,
 				AB8361D622A077BF0049DA07 /* Assets.xcassets */,
 				AB8361D822A077BF0049DA07 /* LaunchScreen.storyboard */,
 				AB8361DB22A077BF0049DA07 /* Info.plist */,
+				AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */,
 				AB8361D322A077BE0049DA07 /* fmcBeta.xcdatamodeld */,
 			);
 			path = fmcBeta;
@@ -135,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB8361F422A077BF0049DA07 /* Build configuration list for PBXNativeTarget "fmcBeta" */;
 			buildPhases = (
+				D54B12E42FBD4DAE6E603826 /* [CP] Check Pods Manifest.lock */,
 				AB8361C522A077BE0049DA07 /* Sources */,
 				AB8361C622A077BE0049DA07 /* Frameworks */,
 				AB8361C722A077BE0049DA07 /* Resources */,
+				8EF6E921602DF550B0BF458C /* [CP] Embed Pods Frameworks */,
+				22C8B3E0F48899C63EF874CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +300,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB8361F722A077BF0049DA07 /* Build configuration list for PBXNativeTarget "fmcBetaTests" */;
 			buildPhases = (
+				58808EF17D79D164D66558C9 /* [CP] Check Pods Manifest.lock */,
 				AB8361DC22A077BF0049DA07 /* Sources */,
 				AB8361DD22A077BF0049DA07 /* Frameworks */,
 				AB8361DE22A077BF0049DA07 /* Resources */,
@@ -170,6 +319,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB8361FA22A077BF0049DA07 /* Build configuration list for PBXNativeTarget "fmcBetaUITests" */;
 			buildPhases = (
+				A299509D78E27DBBA4BADBA9 /* [CP] Check Pods Manifest.lock */,
 				AB8361E722A077BF0049DA07 /* Sources */,
 				AB8361E822A077BF0049DA07 /* Frameworks */,
 				AB8361E922A077BF0049DA07 /* Resources */,
@@ -196,6 +346,14 @@
 				TargetAttributes = {
 					AB8361C822A077BE0049DA07 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 					AB8361DF22A077BF0049DA07 = {
 						CreatedOnToolsVersion = 10.1;
@@ -233,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8361DA22A077BF0049DA07 /* LaunchScreen.storyboard in Resources */,
+				AB14B21F22D79095006AFFE3 /* GoogleService-Info.plist in Resources */,
 				AB8361D722A077BF0049DA07 /* Assets.xcassets in Resources */,
 				AB8361D222A077BE0049DA07 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB14B22022D79095006AFFE3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,19 +409,153 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB14B22122D79095006AFFE3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22C8B3E0F48899C63EF874CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fmcBeta/Pods-fmcBeta-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fmcBeta/Pods-fmcBeta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58808EF17D79D164D66558C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fmcBetaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EF6E921602DF550B0BF458C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fmcBeta/Pods-fmcBeta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fmcBeta/Pods-fmcBeta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A299509D78E27DBBA4BADBA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fmcBetaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D54B12E42FBD4DAE6E603826 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fmcBeta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB8361C522A077BE0049DA07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8361CF22A077BE0049DA07 /* ViewController.swift in Sources */,
+				AB1D72C622F28390009258A5 /* ChurchInfoViewController.swift in Sources */,
+				AB7038B822EF92A9002FB188 /* SignInViewController.swift in Sources */,
+				AB14B22722D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */,
+				ABA86CA222D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */,
 				AB8361D522A077BE0049DA07 /* fmcBeta.xcdatamodeld in Sources */,
+				AB03481322A98E8C00A86E85 /* FeedViewController.swift in Sources */,
+				ABA86C9E22D911C200EBC5EF /* AudioFeedTableViewCell.swift in Sources */,
+				AB1714AA22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,
+				AB1714AE22F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
 				AB8361CD22A077BE0049DA07 /* AppDelegate.swift in Sources */,
+				AB03481722A98E9D00A86E85 /* ComposeViewController.swift in Sources */,
+				ABDB50C422F7BC29002AB8A0 /* UserService.swift in Sources */,
+				ABA86CA622D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */,
+				AB41084922E15B9B00511D0C /* Date Model.swift in Sources */,
+				AB1714A622F3DD720092593C /* PrayerWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +563,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDB50C522F7BC29002AB8A0 /* UserService.swift in Sources */,
+				ABA86C9F22D911C200EBC5EF /* AudioFeedTableViewCell.swift in Sources */,
+				AB1D72C722F28390009258A5 /* ChurchInfoViewController.swift in Sources */,
+				AB03481822A98E9D00A86E85 /* ComposeViewController.swift in Sources */,
+				AB41084A22E15B9B00511D0C /* Date Model.swift in Sources */,
+				AB14B22822D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */,
+				AB03481422A98E8C00A86E85 /* FeedViewController.swift in Sources */,
+				AB1714AF22F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
 				AB8361E522A077BF0049DA07 /* fmcBetaTests.swift in Sources */,
+				ABA86CA322D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */,
+				AB7038B922EF92A9002FB188 /* SignInViewController.swift in Sources */,
+				AB1714AB22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,
+				ABA86CA722D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */,
+				AB1714A722F3DD720092593C /* PrayerWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +584,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDB50C622F7BC29002AB8A0 /* UserService.swift in Sources */,
+				ABA86CA022D911C200EBC5EF /* AudioFeedTableViewCell.swift in Sources */,
+				AB1D72C822F28390009258A5 /* ChurchInfoViewController.swift in Sources */,
+				AB03481922A98E9D00A86E85 /* ComposeViewController.swift in Sources */,
+				AB41084B22E15B9B00511D0C /* Date Model.swift in Sources */,
+				AB14B22922D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */,
+				AB03481522A98E8C00A86E85 /* FeedViewController.swift in Sources */,
+				AB1714B022F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
 				AB8361F022A077BF0049DA07 /* fmcBetaUITests.swift in Sources */,
+				ABA86CA422D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */,
+				AB7038BA22EF92A9002FB188 /* SignInViewController.swift in Sources */,
+				AB1714AC22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,
+				ABA86CA822D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */,
+				AB1714A822F3DD720092593C /* PrayerWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,8 +754,10 @@
 		};
 		AB8361F522A077BF0049DA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7118DBE3078DC1238203986F /* Pods-fmcBeta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fmcBeta/fmcBeta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M8HGS427N;
 				INFOPLIST_FILE = fmcBeta/Info.plist;
@@ -452,8 +774,10 @@
 		};
 		AB8361F622A077BF0049DA07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94FC122C4B7C8D1F9B58A7E3 /* Pods-fmcBeta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fmcBeta/fmcBeta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M8HGS427N;
 				INFOPLIST_FILE = fmcBeta/Info.plist;
@@ -470,6 +794,7 @@
 		};
 		AB8361F822A077BF0049DA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C414C664DE322FD2368E483A /* Pods-fmcBetaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +816,7 @@
 		};
 		AB8361F922A077BF0049DA07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC258266B6DB6E4A43F4E787 /* Pods-fmcBetaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +838,7 @@
 		};
 		AB8361FB22A077BF0049DA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DCF852F778F2A873AA27066 /* Pods-fmcBetaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +859,7 @@
 		};
 		AB8361FC22A077BF0049DA07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C4DDA53A8F9438032D3B6A4 /* Pods-fmcBetaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

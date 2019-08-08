@@ -1,0 +1,6 @@
+framework module Pods_fmcBeta {
+  umbrella header "Pods-fmcBeta-umbrella.h"
+
+  export *
+  module * { export * }
+}
