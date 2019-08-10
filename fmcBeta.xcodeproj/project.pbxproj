@@ -10,15 +10,18 @@
 		47E8F330E814F68261B267CB /* Pods_fmcBetaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7453D9D1FC39F0E9A53ABBB0 /* Pods_fmcBetaTests.framework */; };
 		593E24BAD6292A3CAC47D51E /* Pods_fmcBetaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98C70BFEFF38AD39E87A742 /* Pods_fmcBetaUITests.framework */; };
 		968B613E38BE55E448802EC3 /* Pods_fmcBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BA46734B1C52F3A2D1AC28 /* Pods_fmcBeta.framework */; };
+		A63ECF7422FE5DCF00DD300A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */; };
+		A63ECF7522FE5DCF00DD300A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */; };
+		A63ECF7622FE5DCF00DD300A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */; };
+		A68F5FB022FE2C9C0084EE9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A68F5FAF22FE2C9C0084EE9D /* GoogleService-Info.plist */; };
+		A68F5FB122FE2C9C0084EE9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A68F5FAF22FE2C9C0084EE9D /* GoogleService-Info.plist */; };
+		A68F5FB222FE2C9C0084EE9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A68F5FAF22FE2C9C0084EE9D /* GoogleService-Info.plist */; };
 		AB03481322A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
 		AB03481422A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
 		AB03481522A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
 		AB03481722A98E9D00A86E85 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481622A98E9D00A86E85 /* ComposeViewController.swift */; };
 		AB03481822A98E9D00A86E85 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481622A98E9D00A86E85 /* ComposeViewController.swift */; };
 		AB03481922A98E9D00A86E85 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481622A98E9D00A86E85 /* ComposeViewController.swift */; };
-		AB14B21F22D79095006AFFE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */; };
-		AB14B22022D79095006AFFE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */; };
-		AB14B22122D79095006AFFE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */; };
 		AB14B22722D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */; };
 		AB14B22822D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */; };
 		AB14B22922D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */; };
@@ -88,9 +91,10 @@
 		7453D9D1FC39F0E9A53ABBB0 /* Pods_fmcBetaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fmcBetaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FC122C4B7C8D1F9B58A7E3 /* Pods-fmcBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBeta.release.xcconfig"; path = "Target Support Files/Pods-fmcBeta/Pods-fmcBeta.release.xcconfig"; sourceTree = "<group>"; };
 		9C4DDA53A8F9438032D3B6A4 /* Pods-fmcBetaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBetaUITests.release.xcconfig"; path = "Target Support Files/Pods-fmcBetaUITests/Pods-fmcBetaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		A68F5FAF22FE2C9C0084EE9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB03481222A98E8C00A86E85 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		AB03481622A98E9D00A86E85 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
-		AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		AB1714A522F3DD720092593C /* PrayerWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerWallViewController.swift; sourceTree = "<group>"; };
 		AB1714A922F3DD990092593C /* PrayerWallPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerWallPostViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				AB03481622A98E9D00A86E85 /* ComposeViewController.swift */,
 				AB7038B722EF92A9002FB188 /* SignInViewController.swift */,
+				A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */,
 				AB1714A922F3DD990092593C /* PrayerWallPostViewController.swift */,
 				AB03481222A98E8C00A86E85 /* FeedViewController.swift */,
 				ABA86CA122D911FA00EBC5EF /* Mp3FeedViewController.swift */,
@@ -249,7 +254,7 @@
 				AB8361D622A077BF0049DA07 /* Assets.xcassets */,
 				AB8361D822A077BF0049DA07 /* LaunchScreen.storyboard */,
 				AB8361DB22A077BF0049DA07 /* Info.plist */,
-				AB14B21E22D79095006AFFE3 /* GoogleService-Info.plist */,
+				A68F5FAF22FE2C9C0084EE9D /* GoogleService-Info.plist */,
 				AB8361D322A077BE0049DA07 /* fmcBeta.xcdatamodeld */,
 			);
 			path = fmcBeta;
@@ -391,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8361DA22A077BF0049DA07 /* LaunchScreen.storyboard in Resources */,
-				AB14B21F22D79095006AFFE3 /* GoogleService-Info.plist in Resources */,
+				A68F5FB022FE2C9C0084EE9D /* GoogleService-Info.plist in Resources */,
 				AB8361D722A077BF0049DA07 /* Assets.xcassets in Resources */,
 				AB8361D222A077BE0049DA07 /* Main.storyboard in Resources */,
 			);
@@ -401,7 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB14B22022D79095006AFFE3 /* GoogleService-Info.plist in Resources */,
+				A68F5FB122FE2C9C0084EE9D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB14B22122D79095006AFFE3 /* GoogleService-Info.plist in Resources */,
+				A68F5FB222FE2C9C0084EE9D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +555,7 @@
 				ABA86C9E22D911C200EBC5EF /* AudioFeedTableViewCell.swift in Sources */,
 				AB1714AA22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,
 				AB1714AE22F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
+				A63ECF7422FE5DCF00DD300A /* EventsViewController.swift in Sources */,
 				AB8361CD22A077BE0049DA07 /* AppDelegate.swift in Sources */,
 				AB03481722A98E9D00A86E85 /* ComposeViewController.swift in Sources */,
 				ABDB50C422F7BC29002AB8A0 /* UserService.swift in Sources */,
@@ -577,6 +583,7 @@
 				AB1714AB22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,
 				ABA86CA722D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */,
 				AB1714A722F3DD720092593C /* PrayerWallViewController.swift in Sources */,
+				A63ECF7522FE5DCF00DD300A /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +605,7 @@
 				AB1714AC22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,
 				ABA86CA822D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */,
 				AB1714A822F3DD720092593C /* PrayerWallViewController.swift in Sources */,
+				A63ECF7622FE5DCF00DD300A /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
