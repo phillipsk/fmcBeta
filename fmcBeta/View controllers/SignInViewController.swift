@@ -36,9 +36,8 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
         GIDSignIn.sharedInstance().clientID = "14686721816-plr0fibrbap3v8qds70863bj440luio6.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
-      // GIDSignIn.sharedInstance().signIn()
-            
-       
+        GIDSignIn.sharedInstance().signIn()
+        
     }
     
     
@@ -46,18 +45,16 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
             if let error = error {
                 print("\(error.localizedDescription)")
             } else {
-//                // Perform any operations on signed in user here.
-//                let userId = user.userID                  // For client-side use only!
-//                let idToken = user.authentication.idToken // Safe to send to the server
-//                let fullName = user.profile.name
-//                let givenName = user.profile.givenName
-//                let familyName = user.profile.familyName
-//                let email = user.profile.email
-//                // ...
-                var fullName: String!
-                fullName = user.profile.name as String
-                
-                print(fullName)
+                // Perform any operations on signed in user here.
+                let userId = user.userID                  // For client-side use only!
+                let idToken = user.authentication.idToken // Safe to send to the server
+                let fullName = user.profile.name
+                let givenName = user.profile.givenName
+                let familyName = user.profile.familyName
+                let email = user.profile.email
+                // ...
+               
+               
             }
         
 
@@ -72,13 +69,13 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
                                                        accessToken: authentication.accessToken)
         // ...
         
-        Auth.auth().signIn(with: credential) { (authResult, error) in
+       Auth.auth().signIn(with: credential) { (authResult, error) in
             if let err = error {
                 print("Failed Auth",err)
                 return
             }
             // User is signed in
-            // ...
+            
         }
         
         

@@ -63,6 +63,8 @@ class ChurchInfoViewController: UIViewController {
     
     }
     
+    @IBAction func userDidSignOut(_ sender:Any ) {
+    }
     
 }
 

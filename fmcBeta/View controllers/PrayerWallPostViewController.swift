@@ -28,7 +28,7 @@ class PrayerWallPostViewController: UIViewController  {
  
     
     @IBAction func didPostPrayerRequest(_ sender: Any) {
-        let prayerPosted:[String: Any] = ["praydate": [".sv":"timestamp"], "prayer": prayerPostText.text!]
+        let prayerPosted:[String: Any] = ["praydate": [".sv":"timestamp"], "prayer": prayerPostText.text!,]
         
         prayerRef?.child("Prayers").childByAutoId().setValue(prayerPosted)
         

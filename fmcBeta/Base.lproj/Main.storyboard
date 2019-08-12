@@ -414,7 +414,7 @@
         <scene sceneID="hjp-3o-3Of">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wHP-vk-eNM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-notification-45" id="pZ5-Do-KEG">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-push-notifications-100" id="pZ5-Do-KEG">
                         <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -480,7 +480,7 @@
         <scene sceneID="Z2V-cE-Iqi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ocg-cp-8Ii" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-playlist-80" id="eTZ-18-SDb">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-lounge-music-playlist-80" id="eTZ-18-SDb">
                         <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -601,7 +601,13 @@
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZ2-cr-iKy">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <items>
-                                            <navigationItem title="Church Info" id="sZg-Bp-hlv"/>
+                                            <navigationItem title="Church Info" id="sZg-Bp-hlv">
+                                                <barButtonItem key="rightBarButtonItem" title="SignOut" id="KIu-6N-xfi">
+                                                    <connections>
+                                                        <action selector="userDidSignOut:" destination="kGL-rw-swg" id="jwv-mT-RdA"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
                                         </items>
                                     </navigationBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85 Centre StBoston, MA 02119" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxT-Wz-kNh">
@@ -888,10 +894,10 @@
             </objects>
             <point key="canvasLocation" x="1009" y="2549"/>
         </scene>
-        <!--View Controller-->
+        <!--Events Selector View Controller-->
         <scene sceneID="Da8-m9-jUV">
             <objects>
-                <viewController id="jGX-8T-cfP" sceneMemberID="viewController">
+                <viewController id="jGX-8T-cfP" customClass="EventsSelectorViewController" customModule="fmcBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUI-xm-uEe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -900,25 +906,85 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="nBv-jG-eg7">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="I5d-x7-6lF"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="I5d-x7-6lF">
+                                            <connections>
+                                                <action selector="dismissEventsOrganizer:" destination="jGX-8T-cfP" id="HD1-hw-lh3"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eiw-0M-y55"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Event Title Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rhX-3A-e1e">
+                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="eventTitleTextField:" destination="kR8-q9-F3v" eventType="editingDidEnd" id="0Di-it-cdA"/>
+                                    <action selector="eventTitleTextField:" destination="jGX-8T-cfP" eventType="editingDidEnd" id="fAP-3m-8JR"/>
+                                </connections>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-tT-D7x">
+                                <rect key="frame" x="0.0" y="125" width="375" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="587154688.49943495">
+                                    <!--2019-08-10 18:31:28 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="eventsDateSelector:" destination="kR8-q9-F3v" eventType="valueChanged" id="9fI-Pj-bb3"/>
+                                    <action selector="eventsDateSelector:" destination="jGX-8T-cfP" eventType="valueChanged" id="Bit-DC-EK5"/>
+                                </connections>
+                            </datePicker>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orionthemes-placeholder-image-300x300" translatesAutoresizingMaskIntoConstraints="NO" id="IEk-4e-258">
+                                <rect key="frame" x="93" y="307" width="189" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="Gje-MR-MEy"/>
+                                    <constraint firstAttribute="width" constant="189" id="rwR-Sp-aNe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwO-t8-CyO">
+                                <rect key="frame" x="124" y="374" width="127" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="3b3-GK-rQb"/>
+                                    <constraint firstAttribute="height" constant="113" id="DP9-uP-uBB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="imageSelector:" destination="jGX-8T-cfP" eventType="touchUpInside" id="lD4-T2-Vg5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pgv-Qe-afq" firstAttribute="top" secondItem="cgw-8K-Ve9" secondAttribute="top" id="3bG-hC-Qae"/>
+                            <constraint firstItem="xzK-tT-D7x" firstAttribute="leading" secondItem="cgw-8K-Ve9" secondAttribute="leading" id="4T2-Ue-Bci"/>
+                            <constraint firstItem="cgw-8K-Ve9" firstAttribute="bottom" secondItem="IEk-4e-258" secondAttribute="bottom" constant="114" id="6AK-js-bOs"/>
+                            <constraint firstItem="rhX-3A-e1e" firstAttribute="leading" secondItem="cgw-8K-Ve9" secondAttribute="leading" id="8V2-UM-Vy4"/>
+                            <constraint firstItem="bwO-t8-CyO" firstAttribute="top" secondItem="IEk-4e-258" secondAttribute="bottom" constant="-179" id="Dy6-z0-5Jk"/>
+                            <constraint firstItem="IEk-4e-258" firstAttribute="leading" secondItem="cgw-8K-Ve9" secondAttribute="leading" constant="93" id="F1C-2t-vy5"/>
+                            <constraint firstItem="rhX-3A-e1e" firstAttribute="trailing" secondItem="cgw-8K-Ve9" secondAttribute="trailing" id="FlV-st-IBJ"/>
+                            <constraint firstItem="xzK-tT-D7x" firstAttribute="trailing" secondItem="cgw-8K-Ve9" secondAttribute="trailing" id="Izn-h6-iEz"/>
+                            <constraint firstItem="xzK-tT-D7x" firstAttribute="top" secondItem="rhX-3A-e1e" secondAttribute="bottom" constant="31" id="LJR-FR-9g5"/>
+                            <constraint firstItem="bwO-t8-CyO" firstAttribute="leading" secondItem="IEk-4e-258" secondAttribute="trailing" constant="-158" id="M7s-zD-VyQ"/>
+                            <constraint firstItem="bwO-t8-CyO" firstAttribute="centerX" secondItem="IEk-4e-258" secondAttribute="centerX" id="V9V-fX-vnY"/>
                             <constraint firstItem="cgw-8K-Ve9" firstAttribute="bottom" secondItem="pgv-Qe-afq" secondAttribute="bottom" constant="603" id="flH-SH-ZWM"/>
                             <constraint firstItem="pgv-Qe-afq" firstAttribute="leading" secondItem="cgw-8K-Ve9" secondAttribute="leading" id="gFh-Bk-Rke"/>
+                            <constraint firstItem="rhX-3A-e1e" firstAttribute="top" secondItem="pgv-Qe-afq" secondAttribute="bottom" id="iYP-KE-9oy"/>
+                            <constraint firstItem="cgw-8K-Ve9" firstAttribute="bottom" secondItem="xzK-tT-D7x" secondAttribute="bottom" constant="380" id="ith-V0-udX"/>
                             <constraint firstItem="pgv-Qe-afq" firstAttribute="trailing" secondItem="cgw-8K-Ve9" secondAttribute="trailing" id="kk0-x0-YcM"/>
+                            <constraint firstItem="cgw-8K-Ve9" firstAttribute="trailing" secondItem="IEk-4e-258" secondAttribute="trailing" constant="93" id="lvw-Su-PiJ"/>
+                            <constraint firstItem="IEk-4e-258" firstAttribute="top" secondItem="xzK-tT-D7x" secondAttribute="bottom" constant="20" id="rht-nc-qo7"/>
+                            <constraint firstItem="cgw-8K-Ve9" firstAttribute="bottom" secondItem="rhX-3A-e1e" secondAttribute="bottom" constant="573" id="sWI-pI-LlC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cgw-8K-Ve9"/>
                     </view>
+                    <connections>
+                        <outlet property="eventsFlyerImagePicker" destination="IEk-4e-258" id="LJs-xP-rVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxf-IS-ct7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kR8-q9-F3v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="2549"/>
+            <point key="canvasLocation" x="2393" y="2593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D3O-dq-Yp6">
@@ -947,7 +1013,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-Iz-sAh">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-Iz-sAh">
                                 <rect key="frame" x="0.0" y="64" width="375" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1028,7 +1094,11 @@
                         <viewLayoutGuide key="safeArea" id="zTs-b0-0cf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="mMN-ad-0TK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QHs-gy-WlM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QHs-gy-WlM">
+                            <connections>
+                                <segue destination="jGX-8T-cfP" kind="presentation" id="XbJ-aK-FJw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="pageView" destination="Xvc-sh-Yex" id="IB9-QX-jsC"/>
@@ -1039,11 +1109,11 @@
             </objects>
             <point key="canvasLocation" x="1853.5999999999999" y="1817.5412293853076"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="jL4-W6-EPm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kg2-u9-EO9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-schedule-50" id="cWG-pK-pu9"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-schedule-50" id="cWG-pK-pu9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vhb-ty-swy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1070,15 +1140,16 @@
         <image name="icons8-end-40" width="40" height="40"/>
         <image name="icons8-fast-forward-40" width="40" height="40"/>
         <image name="icons8-info-50" width="25" height="25"/>
+        <image name="icons8-lounge-music-playlist-80" width="53" height="53"/>
         <image name="icons8-no-audio-16" width="16" height="16"/>
-        <image name="icons8-notification-45" width="29" height="29"/>
-        <image name="icons8-playlist-80" width="40" height="40"/>
+        <image name="icons8-push-notifications-100" width="33" height="33"/>
         <image name="icons8-rewind-40" width="40" height="40"/>
         <image name="icons8-schedule-50" width="25" height="25"/>
         <image name="icons8-skip-to-start-40" width="40" height="40"/>
         <image name="instagram" width="64" height="64"/>
         <image name="like" width="32" height="32"/>
         <image name="map" width="64" height="64"/>
+        <image name="orionthemes-placeholder-image-300x300" width="300" height="300"/>
         <image name="pause" width="40" height="40"/>
         <image name="play" width="40" height="40"/>
         <image name="pray" width="32" height="32"/>
