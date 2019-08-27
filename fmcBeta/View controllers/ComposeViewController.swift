@@ -24,13 +24,19 @@ class ComposeViewController: UIViewController {
         super.viewDidLoad()
 ref = Database.database().reference()
         
-        
-
+       
         
 }
+   
+    
+    
+    
     
     @IBAction func addPost(_ sender: Any) {
-        let objectToSave: [String: Any] = ["date": [".sv":"timestamp"], "text": textView.text]
+        
+    
+        
+        let objectToSave: [String: Any] = ["date": [".sv":"timestamp"], "text": textView.text, ]
         
         
         

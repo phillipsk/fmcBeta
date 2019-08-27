@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-lounge-music-playlist-80@2x.png",
+      "filename" : "dove@2x.png",
       "scale" : "1x"
     },
     {
@@ -11,7 +11,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-lounge-music-playlist-80@3x.png",
+      "filename" : "dove@3x.png",
       "scale" : "3x"
     }
   ],

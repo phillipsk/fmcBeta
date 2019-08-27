@@ -36,7 +36,14 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
         GIDSignIn.sharedInstance().clientID = "14686721816-plr0fibrbap3v8qds70863bj440luio6.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().signIn()
+        
+        if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+            GIDSignIn.sharedInstance().signIn()
+        } else {
+            let welcomVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome")
+            self.present(welcomVC!, animated: true, completion: nil)
+        }
+        
         
     }
     
@@ -69,7 +76,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
                                                        accessToken: authentication.accessToken)
         // ...
         
-       Auth.auth().signIn(with: credential) { (authResult, error) in
+     Auth.auth().signIn(with: credential) { (authResult, error) in
             if let err = error {
                 print("Failed Auth",err)
                 return
@@ -79,7 +86,8 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
         }
         
         
-        performSegue(withIdentifier: "SignInDidTap", sender: self)
+        let churchIngoVC = self.storyboard?.instantiateViewController(withIdentifier: "true")
+        self.present(churchIngoVC!, animated: true, completion: nil)
         
         print(user.profile.name)
     }

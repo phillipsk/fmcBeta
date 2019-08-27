@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-
+import FirebaseAuth
 class ChurchInfoViewController: UIViewController {
     
     
@@ -64,6 +64,17 @@ class ChurchInfoViewController: UIViewController {
     }
     
     @IBAction func userDidSignOut(_ sender:Any ) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        let welcomVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome")
+        self.present(welcomVC!, animated: true, completion: nil)
+        
+        
     }
     
 }

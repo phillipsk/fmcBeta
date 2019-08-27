@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import GoogleSignIn
+import FirebaseAuth
 
 class PrayerWallPostViewController: UIViewController  {
   
@@ -22,13 +23,19 @@ class PrayerWallPostViewController: UIViewController  {
 
         prayerRef = Database.database().reference()
         
+     
 
     }
   
- 
     
+
     @IBAction func didPostPrayerRequest(_ sender: Any) {
-        let prayerPosted:[String: Any] = ["praydate": [".sv":"timestamp"], "prayer": prayerPostText.text!,]
+        
+      
+        
+         let userInfo = Auth.auth().currentUser?.displayName
+        
+        let prayerPosted:[String: Any] = ["praydate": [".sv":"timestamp"], "prayer": prayerPostText.text!,"username":userInfo!]
         
         prayerRef?.child("Prayers").childByAutoId().setValue(prayerPosted)
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class PrayerWallTableViewCell: UITableViewCell {
     
@@ -26,5 +27,6 @@ class PrayerWallTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }

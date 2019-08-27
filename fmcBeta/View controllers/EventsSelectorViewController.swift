@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class EventsSelectorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var eventsRef: DatabaseReference!
+    
+   
     
     let imagePicker = UIImagePickerController()
     
-    @IBAction func eventTitleTextField(_ sender: Any) {
-    }
+    @IBOutlet weak var eventsTitleTextField: UITextField!
+    @IBOutlet weak var eventDateSelector: UIDatePicker!
+    
+
+    
     @IBAction func eventsDateSelector(_ sender: Any) {
     }
     @IBOutlet weak var eventsFlyerImagePicker:
@@ -44,12 +51,18 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ eventsRef = Database.database().reference()
       
         imagePicker.delegate = self
+        
+        
+        
+    
+        
     }
     
 
+    
     @IBAction func dismissEventsOrganizer(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
@@ -66,6 +79,16 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func saveEventsButton(_ sender: Any) {
+        
+        
+        let eventSaved:[String: Any] = ["eventdate":eventDateSelector.date .timeIntervalSince1970,"eventtitle":eventsTitleTextField.text!]
+        
+        eventsRef.child("Church Events").childByAutoId().setValue(eventSaved)
+    
+    }
+    
 
 }
 

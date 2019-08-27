@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class EventsViewController: UIViewController {
 
+
+    @IBOutlet weak var addEventsButton: UIBarButtonItem!
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var pageView: UIPageControl!
     
@@ -30,6 +33,17 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (Auth.auth().currentUser!.displayName != "Neil Leon")  {
+            self.addEventsButton.tintColor = UIColor.clear
+            self.addEventsButton.isEnabled = false
+            
+        }
+        else{
+            
+            self.addEventsButton.isEnabled = true
+        }
+        
         
         pageView.numberOfPages = imgArr.count
         pageView.currentPage = 0

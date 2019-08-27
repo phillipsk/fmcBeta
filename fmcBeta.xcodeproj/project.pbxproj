@@ -19,6 +19,9 @@
 		A63ECF7C22FF519500DD300A /* EventsSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7B22FF519500DD300A /* EventsSelectorViewController.swift */; };
 		A63ECF7D22FF519500DD300A /* EventsSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7B22FF519500DD300A /* EventsSelectorViewController.swift */; };
 		A63ECF7E22FF519500DD300A /* EventsSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7B22FF519500DD300A /* EventsSelectorViewController.swift */; };
+		A65876E32314ED0D00B68690 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65876E22314ED0D00B68690 /* EventsTableViewCell.swift */; };
+		A65876E42314ED0D00B68690 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65876E22314ED0D00B68690 /* EventsTableViewCell.swift */; };
+		A65876E52314ED0D00B68690 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65876E22314ED0D00B68690 /* EventsTableViewCell.swift */; };
 		AB03481322A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
 		AB03481422A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
 		AB03481522A98E8C00A86E85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03481222A98E8C00A86E85 /* FeedViewController.swift */; };
@@ -97,6 +100,7 @@
 		A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		A63ECF7722FE828200DD300A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A63ECF7B22FF519500DD300A /* EventsSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSelectorViewController.swift; sourceTree = "<group>"; };
+		A65876E22314ED0D00B68690 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		AB03481222A98E8C00A86E85 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		AB03481622A98E9D00A86E85 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				AB14B22622D7D7A7006AFFE3 /* CustomTableViewCell.swift */,
+				A65876E22314ED0D00B68690 /* EventsTableViewCell.swift */,
 				ABA86C9D22D911C200EBC5EF /* AudioFeedTableViewCell.swift */,
 				AB1714AD22F3DDCF0092593C /* PrayerWallTableViewCell.swift */,
 			);
@@ -567,6 +572,7 @@
 				ABDB50C422F7BC29002AB8A0 /* UserService.swift in Sources */,
 				ABA86CA622D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */,
 				AB41084922E15B9B00511D0C /* Date Model.swift in Sources */,
+				A65876E32314ED0D00B68690 /* EventsTableViewCell.swift in Sources */,
 				AB1714A622F3DD720092593C /* PrayerWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +591,7 @@
 				AB1714AF22F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
 				AB8361E522A077BF0049DA07 /* fmcBetaTests.swift in Sources */,
 				ABA86CA322D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */,
+				A65876E42314ED0D00B68690 /* EventsTableViewCell.swift in Sources */,
 				A63ECF7D22FF519500DD300A /* EventsSelectorViewController.swift in Sources */,
 				AB7038B922EF92A9002FB188 /* SignInViewController.swift in Sources */,
 				AB1714AB22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,
@@ -608,6 +615,7 @@
 				AB1714B022F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
 				AB8361F022A077BF0049DA07 /* fmcBetaUITests.swift in Sources */,
 				ABA86CA422D911FA00EBC5EF /* Mp3FeedViewController.swift in Sources */,
+				A65876E52314ED0D00B68690 /* EventsTableViewCell.swift in Sources */,
 				A63ECF7E22FF519500DD300A /* EventsSelectorViewController.swift in Sources */,
 				AB7038BA22EF92A9002FB188 /* SignInViewController.swift in Sources */,
 				AB1714AC22F3DD990092593C /* PrayerWallPostViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnL-k2-Tb9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NHC-04-top">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -85,6 +85,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="announcementsComposer" destination="BqI-d0-QhG" id="IXk-ub-7nY"/>
                         <outlet property="tableView" destination="CIV-KV-eiU" id="RNZ-kM-uuI"/>
                     </connections>
                 </viewController>
@@ -415,7 +416,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wHP-vk-eNM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="icons8-push-notifications-100" id="pZ5-Do-KEG">
-                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                        <inset key="imageInsets" minX="3" minY="-2" maxX="1" maxY="-9"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MFD-eI-vHM">
@@ -429,7 +430,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lM9-DI-BPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-852" y="1034"/>
+            <point key="canvasLocation" x="-852" y="1084"/>
         </scene>
         <!--Item-->
         <scene sceneID="ia2-kP-0e1">
@@ -474,14 +475,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gF9-1c-7cM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="369"/>
+            <point key="canvasLocation" x="471" y="204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z2V-cE-Iqi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ocg-cp-8Ii" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-lounge-music-playlist-80" id="eTZ-18-SDb">
-                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-music-folder-50" id="eTZ-18-SDb">
+                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="-2"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZFv-ra-MNT">
@@ -500,7 +501,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="P6Y-yh-FNn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wnL-k2-Tb9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="true" automaticallyAdjustsScrollViewInsets="NO" id="wnL-k2-Tb9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w38-n6-Ts0">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -522,7 +523,7 @@
         <!--Church Info View Controller-->
         <scene sceneID="suE-mH-rpx">
             <objects>
-                <viewController id="kGL-rw-swg" customClass="ChurchInfoViewController" customModule="fmcBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="churchInfo" id="kGL-rw-swg" customClass="ChurchInfoViewController" customModule="fmcBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gx6-bx-vNb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -674,8 +675,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nba-IJ-gY0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-info-50" id="bO4-aL-Zbn">
-                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-cross-50" id="bO4-aL-Zbn">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRy-zj-5ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -821,19 +822,20 @@
                         <viewLayoutGuide key="safeArea" id="oZj-R8-UbJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Prayer Wall" id="jQb-o6-cJO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="WiH-Pw-tex">
+                        <barButtonItem key="rightBarButtonItem" tag="1" systemItem="compose" id="WiH-Pw-tex">
                             <connections>
                                 <segue destination="cVc-Xc-fyn" kind="presentation" id="wbF-uO-zWK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="composeButton" destination="WiH-Pw-tex" id="oB1-26-EZm"/>
                         <outlet property="tableView" destination="Gg0-mG-Qyp" id="fL5-Ge-7g6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1o-KK-gZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="1817.5412293853076"/>
+            <point key="canvasLocation" x="1009" y="1763"/>
         </scene>
         <!--Prayer Wall Post View Controller-->
         <scene sceneID="8f5-9c-q2w">
@@ -892,7 +894,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0E-uk-xf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uq6-hO-fx3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="2549"/>
+            <point key="canvasLocation" x="1009" y="2486"/>
         </scene>
         <!--Events Selector View Controller-->
         <scene sceneID="Da8-m9-jUV">
@@ -911,7 +913,11 @@
                                                 <action selector="dismissEventsOrganizer:" destination="jGX-8T-cfP" id="HD1-hw-lh3"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eiw-0M-y55"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eiw-0M-y55">
+                                            <connections>
+                                                <action selector="saveEventsButton:" destination="jGX-8T-cfP" id="3Na-Ss-wDO"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -922,7 +928,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="eventTitleTextField:" destination="kR8-q9-F3v" eventType="editingDidEnd" id="0Di-it-cdA"/>
-                                    <action selector="eventTitleTextField:" destination="jGX-8T-cfP" eventType="editingDidEnd" id="fAP-3m-8JR"/>
                                 </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-tT-D7x">
@@ -978,19 +983,23 @@
                         <viewLayoutGuide key="safeArea" id="cgw-8K-Ve9"/>
                     </view>
                     <connections>
+                        <outlet property="eventDateSelector" destination="xzK-tT-D7x" id="aNT-dX-mX3"/>
                         <outlet property="eventsFlyerImagePicker" destination="IEk-4e-258" id="LJs-xP-rVl"/>
+                        <outlet property="eventsTitleTextField" destination="rhX-3A-e1e" id="xB9-YL-fX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxf-IS-ct7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kR8-q9-F3v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2393" y="2593"/>
+            <point key="canvasLocation" x="1854" y="2486"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D3O-dq-Yp6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JO4-1G-DW6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="prayer" id="KU6-gM-7ly"/>
+                    <tabBarItem key="tabBarItem" title="" image="dove" id="KU6-gM-7ly">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DQJ-74-d9n">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1067,13 +1076,44 @@
                                     <constraint firstAttribute="width" constant="375" id="YPL-Ec-uiz"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="279" id="neC-W6-de1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="279" id="neC-W6-de1" customClass="EventsTableViewCell" customModule="fmcBeta" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="neC-W6-de1" id="cIg-h0-kkV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="278.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO9-Ws-HjR">
+                                                    <rect key="frame" x="0.0" y="11" width="375" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="Ede-4k-7SB"/>
+                                                        <constraint firstAttribute="width" constant="375" id="XZ3-Qm-0vt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-0L-8U0">
+                                                    <rect key="frame" x="0.0" y="69" width="375" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SMb-0L-8U0" firstAttribute="top" secondItem="eO9-Ws-HjR" secondAttribute="bottom" constant="24" id="0tS-cz-aU6"/>
+                                                <constraint firstAttribute="bottom" secondItem="SMb-0L-8U0" secondAttribute="bottom" constant="175.5" id="BJJ-v5-qGT"/>
+                                                <constraint firstAttribute="trailing" secondItem="SMb-0L-8U0" secondAttribute="trailing" id="Cgw-cu-NMW"/>
+                                                <constraint firstItem="eO9-Ws-HjR" firstAttribute="top" secondItem="cIg-h0-kkV" secondAttribute="top" constant="11" id="GtY-Ca-TjE"/>
+                                                <constraint firstAttribute="trailing" secondItem="eO9-Ws-HjR" secondAttribute="trailing" id="XG0-0X-iZn"/>
+                                                <constraint firstItem="SMb-0L-8U0" firstAttribute="leading" secondItem="cIg-h0-kkV" secondAttribute="leading" id="aEw-BV-l81"/>
+                                                <constraint firstItem="eO9-Ws-HjR" firstAttribute="leading" secondItem="cIg-h0-kkV" secondAttribute="leading" id="plv-C8-5zs"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="SMb-0L-8U0" id="j7B-LQ-m5d"/>
+                                            <outlet property="eventTitle" destination="eO9-Ws-HjR" id="O5Y-Z6-IkP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1101,19 +1141,22 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addEventsButton" destination="QHs-gy-WlM" id="WGa-XB-p8g"/>
                         <outlet property="pageView" destination="Xvc-sh-Yex" id="IB9-QX-jsC"/>
                         <outlet property="sliderCollectionView" destination="IlH-Iz-sAh" id="fLv-y9-o9H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQP-xP-n46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853.5999999999999" y="1817.5412293853076"/>
+            <point key="canvasLocation" x="1853.5999999999999" y="1762.6686656671666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jL4-W6-EPm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kg2-u9-EO9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-schedule-50" id="cWG-pK-pu9"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-schedule-50" id="cWG-pK-pu9">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vhb-ty-swy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1132,15 +1175,16 @@
     <resources>
         <image name="FMClogo-01 (2)" width="1501" height="1501"/>
         <image name="domain (2)" width="128" height="128"/>
+        <image name="dove" width="42" height="42"/>
         <image name="facebook" width="64" height="64"/>
         <image name="icons8-audio-16" width="16" height="16"/>
         <image name="icons8-audio-wave-48" width="48" height="48"/>
         <image name="icons8-back-16" width="16" height="16"/>
         <image name="icons8-circled-play-40" width="40" height="40"/>
+        <image name="icons8-cross-50" width="25" height="25"/>
         <image name="icons8-end-40" width="40" height="40"/>
         <image name="icons8-fast-forward-40" width="40" height="40"/>
-        <image name="icons8-info-50" width="25" height="25"/>
-        <image name="icons8-lounge-music-playlist-80" width="53" height="53"/>
+        <image name="icons8-music-folder-50" width="50" height="50"/>
         <image name="icons8-no-audio-16" width="16" height="16"/>
         <image name="icons8-push-notifications-100" width="33" height="33"/>
         <image name="icons8-rewind-40" width="40" height="40"/>
@@ -1153,7 +1197,6 @@
         <image name="pause" width="40" height="40"/>
         <image name="play" width="40" height="40"/>
         <image name="pray" width="32" height="32"/>
-        <image name="prayer" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P1A-8w-Ply"/>
