@@ -8,10 +8,23 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
-class EventsViewController: UIViewController {
+class EventsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+   
+    
 
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    var eventsRef: DatabaseReference?
+    var eventsDatabaseHandle:DatabaseHandle?
+    
+    
+    var eventsTitles = [String]()
+    var eventTimestamps:[NSDate] = []
+    var eventsLocations = [String]()
+    
+    
     @IBOutlet weak var addEventsButton: UIBarButtonItem!
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var pageView: UIPageControl!
@@ -33,6 +46,39 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        eventsRef = Database.database().reference()
+        
+        tableView.reloadData()
+        
+  tableView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+    eventsDatabaseHandle = eventsRef?.child("Church Events").observe(.childAdded, with: { (snaphot) in
+        
+         let eventPost = snaphot.value as! [String: Any]
+        
+        let eventtimestamp = eventPost["eventdate"] as! TimeInterval
+        let eventTimeDate:NSDate = NSDate(timeIntervalSinceNow: eventtimestamp)
+        
+        self.eventTimestamps.append(eventTimeDate)
+        
+        
+        self.eventsTitles.append(eventPost["eventtitle"] as! String)
+        
+self.eventsLocations.append(eventPost["eventlocation"] as! String)
+        
+        
+        self.tableView.reloadData()
+        
+        })
+        
+//**************************************************************************
+        
         
         if (Auth.auth().currentUser!.displayName != "Neil Leon")  {
             self.addEventsButton.tintColor = UIColor.clear
@@ -74,6 +120,32 @@ class EventsViewController: UIViewController {
         
     }
     
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return eventsTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "events") as! EventsTableViewCell
+        
+        cell.eventTitle.text! = eventsTitles[indexPath.row]
+        
+        let eventTempTimestamps:NSDate = eventTimestamps[indexPath.row]
+        let eventTimestampDate:Date = eventTempTimestamps as Date
+        
+        cell.eventDate.text = eventTimestampDate.timeIntervalSinceReferenceDate.description
+        
+        cell.eventLocation.text! = eventsLocations[indexPath.row]
+        
+        
+        cell.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        
+        
+        
+        return cell
+    }
+    
 }
 
 extension EventsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -88,6 +160,8 @@ extension EventsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         return cell
     }
+    
+    
 }
 
 extension EventsViewController: UICollectionViewDelegateFlowLayout {
@@ -108,4 +182,8 @@ extension EventsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
+    
+    
+   
+    
 }

@@ -27,16 +27,16 @@ class PrayerWallViewController:UIViewController,UITableViewDelegate,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (Auth.auth().currentUser!.displayName != "Neil Leon")  {
-             self.composeButton.tintColor = UIColor.clear
-            self.composeButton.isEnabled = false
-            
-        }
-        else{
-            
-           self.composeButton.isEnabled = true
-        }
-        
+//        if (Auth.auth().currentUser!.displayName != "Neil Leon")  {
+//             self.composeButton.tintColor = UIColor.clear
+//            self.composeButton.isEnabled = false
+//            
+//        }
+//        else{
+//            
+//           self.composeButton.isEnabled = true
+//        }
+//        
         
         prayerRef = Database.database().reference()
         

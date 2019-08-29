@@ -20,7 +20,8 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var eventsTitleTextField: UITextField!
     @IBOutlet weak var eventDateSelector: UIDatePicker!
     
-
+    @IBOutlet weak var eventsLocation: UITextField!
+    
     
     @IBAction func eventsDateSelector(_ sender: Any) {
     }
@@ -83,9 +84,11 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func saveEventsButton(_ sender: Any) {
         
         
-        let eventSaved:[String: Any] = ["eventdate":eventDateSelector.date .timeIntervalSince1970,"eventtitle":eventsTitleTextField.text!]
+        let eventSaved:[String: Any] = ["eventdate":eventDateSelector.date.timeIntervalSinceNow,"eventtitle":eventsTitleTextField.text!,"eventlocation":eventsLocation.text!]
         
         eventsRef.child("Church Events").childByAutoId().setValue(eventSaved)
+        
+        self.dismiss(animated: true, completion: nil)
     
     }
     

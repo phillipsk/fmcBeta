@@ -39,9 +39,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
         
         if GIDSignIn.sharedInstance().hasAuthInKeychain() {
             GIDSignIn.sharedInstance().signIn()
-        } else {
-            let welcomVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome")
-            self.present(welcomVC!, animated: true, completion: nil)
+       
         }
         
         
