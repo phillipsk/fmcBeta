@@ -24,6 +24,10 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     
     
     @IBAction func eventsDateSelector(_ sender: Any) {
+        
+        
+        
+        
     }
     @IBOutlet weak var eventsFlyerImagePicker:
       UIImageView!
@@ -83,8 +87,11 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     
     @IBAction func saveEventsButton(_ sender: Any) {
         
+        let eventsDates = DateFormatter.localizedString(from: eventDateSelector.date, dateStyle: DateFormatter.Style.full, timeStyle: DateFormatter.Style.short) as String
         
-        let eventSaved:[String: Any] = ["eventdate":eventDateSelector.date.timeIntervalSinceNow,"eventtitle":eventsTitleTextField.text!,"eventlocation":eventsLocation.text!]
+        print(eventsDates.description)
+        
+        let eventSaved:[String: Any] = ["eventdate": eventsDates,"eventtitle":eventsTitleTextField.text!,"eventlocation":eventsLocation.text!]
         
         eventsRef.child("Church Events").childByAutoId().setValue(eventSaved)
         

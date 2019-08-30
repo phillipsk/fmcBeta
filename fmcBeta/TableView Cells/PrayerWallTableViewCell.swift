@@ -16,6 +16,8 @@ class PrayerWallTableViewCell: UITableViewCell {
     @IBOutlet weak var wallTimeStamp: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var prayingButton: UIButton!
+    @IBOutlet weak var likeButtonCount: UILabel!
+    @IBOutlet weak var prayerButtonCount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

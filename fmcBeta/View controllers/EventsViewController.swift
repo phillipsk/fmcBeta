@@ -21,7 +21,7 @@ class EventsViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     
     var eventsTitles = [String]()
-    var eventTimestamps:[NSDate] = []
+    var eventTimestamps = [String]()
     var eventsLocations = [String]()
     
     
@@ -62,10 +62,8 @@ class EventsViewController: UIViewController,UITableViewDelegate,UITableViewData
         
          let eventPost = snaphot.value as! [String: Any]
         
-        let eventtimestamp = eventPost["eventdate"] as! TimeInterval
-        let eventTimeDate:NSDate = NSDate(timeIntervalSinceNow: eventtimestamp)
         
-        self.eventTimestamps.append(eventTimeDate)
+      self.eventTimestamps.append(eventPost["eventdate"] as! String)
         
         
         self.eventsTitles.append(eventPost["eventtitle"] as! String)
@@ -131,10 +129,7 @@ self.eventsLocations.append(eventPost["eventlocation"] as! String)
         
         cell.eventTitle.text! = eventsTitles[indexPath.row]
         
-        let eventTempTimestamps:NSDate = eventTimestamps[indexPath.row]
-        let eventTimestampDate:Date = eventTempTimestamps as Date
-        
-        cell.eventDate.text = eventTimestampDate.timeIntervalSinceReferenceDate.description
+        cell.eventDate.text! =  eventTimestamps[indexPath.row]
         
         cell.eventLocation.text! = eventsLocations[indexPath.row]
         
@@ -186,4 +181,10 @@ extension EventsViewController: UICollectionViewDelegateFlowLayout {
     
    
     
+}
+
+extension Collection where Indices.Iterator.Element == Index {
+    subscript (safe index: Index) -> Iterator.Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
 }

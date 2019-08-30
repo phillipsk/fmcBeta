@@ -20,23 +20,15 @@ class PrayerWallViewController:UIViewController,UITableViewDelegate,UITableViewD
     var prayerRequest = [String]()
     var prayerTimestamps:[NSDate] = []
     var userName = [String]()
+    var didLike = false
     
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        if (Auth.auth().currentUser!.displayName != "Neil Leon")  {
-//             self.composeButton.tintColor = UIColor.clear
-//            self.composeButton.isEnabled = false
-//            
-//        }
-//        else{
-//            
-//           self.composeButton.isEnabled = true
-//        }
-//        
+    
+
         
         prayerRef = Database.database().reference()
         
@@ -83,14 +75,12 @@ class PrayerWallViewController:UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Prayer") as! PrayerWallTableViewCell
+        
+     
 
         
-//        let userInfo = Auth.auth().currentUser?.displayName
-//        cell.userNameLabel?.text = userInfo?.description
-//  cell.userNameLabel.text = userNameLabel[indexPath.row]
-
-//        print(userInfo?.description)
-        
+    cell.prayerRequestLabel.lineBreakMode = .byWordWrapping
+    cell.prayerRequestLabel.numberOfLines = 8
         
     cell.prayerRequestLabel.text = prayerRequest[indexPath.row]
         

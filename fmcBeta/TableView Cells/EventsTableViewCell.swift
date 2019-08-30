@@ -12,6 +12,9 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventLocation: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +25,5 @@ class EventsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+   
 }
