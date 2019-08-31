@@ -114,20 +114,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jle-OT-9pc">
-                                                    <rect key="frame" x="58" y="5" width="259" height="69"/>
+                                                    <rect key="frame" x="58" y="5" width="259" height="25.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQy-Zg-g4N">
-                                                    <rect key="frame" x="325" y="3" width="50" height="69"/>
+                                                    <rect key="frame" x="325" y="3" width="50" height="22"/>
                                                     <state key="normal" image="icons8-circled-play-40"/>
                                                     <connections>
                                                         <segue destination="02B-J4-AEK" kind="presentation" id="2CU-TY-aeN"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7L8-24-Qhx">
-                                                    <rect key="frame" x="0.0" y="79" width="106" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="35.5" width="106" height="43.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="106" id="8a6-ot-Vwl"/>
                                                     </constraints>
@@ -136,7 +136,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMClogo-01 (2)" translatesAutoresizingMaskIntoConstraints="NO" id="n5W-jL-vFE">
-                                                    <rect key="frame" x="0.0" y="3" width="50" height="73"/>
+                                                    <rect key="frame" x="0.0" y="3" width="50" height="29.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="7kl-0z-Y02"/>
                                                     </constraints>
@@ -260,21 +260,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="332" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsB-jh-OBP">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="40"/>
                                                 <state key="normal" image="icons8-skip-to-start-40"/>
                                                 <connections>
                                                     <action selector="backButton:" destination="02B-J4-AEK" eventType="touchUpInside" id="fGD-S8-krZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAP-Og-rbG">
-                                                <rect key="frame" x="73" y="0.0" width="40" height="40"/>
+                                                <rect key="frame" x="79" y="0.0" width="16" height="40"/>
                                                 <state key="normal" image="icons8-rewind-40"/>
                                                 <connections>
                                                     <action selector="rewindButton:" destination="02B-J4-AEK" eventType="touchUpInside" id="gQR-nl-q8P"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-S1-UYp">
-                                                <rect key="frame" x="146" y="0.0" width="40" height="40"/>
+                                                <rect key="frame" x="158" y="0.0" width="16" height="40"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" image="play"/>
                                                 <state key="selected" image="pause"/>
@@ -283,14 +283,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-Mt-PSz">
-                                                <rect key="frame" x="219" y="0.0" width="40" height="40"/>
+                                                <rect key="frame" x="237" y="0.0" width="16" height="40"/>
                                                 <state key="normal" image="icons8-fast-forward-40"/>
                                                 <connections>
                                                     <action selector="fastForwardButton:" destination="02B-J4-AEK" eventType="touchUpInside" id="cpX-Ws-UCF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-CY-4Cp">
-                                                <rect key="frame" x="292" y="0.0" width="40" height="40"/>
+                                                <rect key="frame" x="316" y="0.0" width="16" height="40"/>
                                                 <state key="normal" image="icons8-end-40"/>
                                                 <connections>
                                                     <action selector="fowardButton:" destination="02B-J4-AEK" eventType="touchUpInside" id="SvN-i7-njY"/>
@@ -1012,7 +1012,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="Pch-Wo-QZf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pch-Wo-QZf">
                                 <rect key="frame" x="0.0" y="412" width="375" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1235,18 +1235,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rTZ-6l-5sG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="41" id="V5M-1v-YZA"/>
+                                                        <constraint firstAttribute="height" constant="81" id="V5M-1v-YZA"/>
                                                         <constraint firstAttribute="width" constant="375" id="g5N-k5-C65"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ABx-Dn-Pa7">
-                                                    <rect key="frame" x="0.0" y="67" width="375" height="41"/>
+                                                    <rect key="frame" x="0.0" y="100" width="375" height="41"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="CX6-L0-YG0"/>
@@ -1256,15 +1256,16 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
                                                 </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-zK-mLE">
-                                                    <rect key="frame" x="0.0" y="152" width="375" height="41"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-zK-mLE">
+                                                    <rect key="frame" x="0.0" y="166" width="375" height="27"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="DrP-Dr-qQc"/>
-                                                        <constraint firstAttribute="height" constant="41" id="nfm-wi-kRM"/>
+                                                        <constraint firstAttribute="height" constant="27" id="nfm-wi-kRM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -1272,11 +1273,11 @@
                                                 <constraint firstItem="ABx-Dn-Pa7" firstAttribute="leading" secondItem="cIg-h0-kkV" secondAttribute="leading" id="2az-45-SOc"/>
                                                 <constraint firstItem="rTZ-6l-5sG" firstAttribute="leading" secondItem="cIg-h0-kkV" secondAttribute="leading" id="2i1-W0-WvJ"/>
                                                 <constraint firstItem="rTZ-6l-5sG" firstAttribute="top" secondItem="cIg-h0-kkV" secondAttribute="top" id="7hS-og-2Hc"/>
-                                                <constraint firstItem="ABx-Dn-Pa7" firstAttribute="top" secondItem="rTZ-6l-5sG" secondAttribute="bottom" constant="26" id="MAs-Me-qQz"/>
+                                                <constraint firstItem="ABx-Dn-Pa7" firstAttribute="top" secondItem="rTZ-6l-5sG" secondAttribute="bottom" constant="19" id="MAs-Me-qQz"/>
                                                 <constraint firstAttribute="bottom" secondItem="V9l-zK-mLE" secondAttribute="bottom" constant="26.5" id="NjC-B9-ZKQ"/>
                                                 <constraint firstItem="V9l-zK-mLE" firstAttribute="leading" secondItem="cIg-h0-kkV" secondAttribute="leading" id="dkd-NQ-NAZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="ABx-Dn-Pa7" secondAttribute="trailing" id="kKh-28-aQY"/>
-                                                <constraint firstItem="V9l-zK-mLE" firstAttribute="top" secondItem="ABx-Dn-Pa7" secondAttribute="bottom" constant="44" id="vrs-nN-hhy"/>
+                                                <constraint firstItem="V9l-zK-mLE" firstAttribute="top" secondItem="ABx-Dn-Pa7" secondAttribute="bottom" constant="25" id="vrs-nN-hhy"/>
                                                 <constraint firstAttribute="trailing" secondItem="V9l-zK-mLE" secondAttribute="trailing" id="xmP-9i-K45"/>
                                             </constraints>
                                         </tableViewCellContentView>

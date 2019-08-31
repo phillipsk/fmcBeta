@@ -103,7 +103,7 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
         
         let B = DateFormatter.localizedString(from: eventTimePicker.date, dateStyle: DateFormatter.Style.none, timeStyle: DateFormatter.Style.short) as String
         
-        let eventsDates = "\(A)  at \(B)"
+        let eventsDates = "\(A) @\(B)"
         
         print(eventsDates.description)
         
