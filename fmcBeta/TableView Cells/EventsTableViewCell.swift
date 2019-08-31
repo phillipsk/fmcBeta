@@ -9,15 +9,43 @@
 import UIKit
 
 class EventsTableViewCell: UITableViewCell {
-    @IBOutlet weak var eventLocation: UILabel!
-    @IBOutlet weak var eventDate: UILabel!
-    @IBOutlet weak var eventTitle: UILabel!
+    @IBOutlet weak var eventLocation: UITextView!
+    @IBOutlet weak var eventDate: UITextView!
+    @IBOutlet weak var eventTitle: UITextView!
+    
+    
+    func detector() {
+    
+    eventLocation.dataDetectorTypes = (UIDataDetectorTypes.all)
+        
+    eventDate.dataDetectorTypes = (UIDataDetectorTypes.all)
+        
+    eventTitle.dataDetectorTypes = (UIDataDetectorTypes.all)
+    
+    eventTitle.isEditable = false
+    eventTitle.isSelectable = true
+    eventTitle.isUserInteractionEnabled = true
+    
+    eventDate.isEditable = false
+    eventDate.isSelectable = true
+    eventDate.isUserInteractionEnabled = true
+    
+    eventLocation.isEditable = false
+    eventLocation.isSelectable = true
+    eventLocation.isUserInteractionEnabled = true
+    
+    
+    }
+    
     
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +53,8 @@ class EventsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
+    
    
 }

@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class EventsSelectorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EventsSelectorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextViewDelegate {
 
     var eventsRef: DatabaseReference!
     
@@ -17,10 +17,11 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     
     let imagePicker = UIImagePickerController()
     
-    @IBOutlet weak var eventsTitleTextField: UITextField!
+    @IBOutlet weak var eventsTitleTextField: UITextView!
     @IBOutlet weak var eventDateSelector: UIDatePicker!
     
-    @IBOutlet weak var eventsLocation: UITextField!
+    @IBOutlet weak var eventTimePicker: UIDatePicker!
+    @IBOutlet weak var eventsLocation: UITextView!
     
     
     @IBAction func eventsDateSelector(_ sender: Any) {
@@ -32,16 +33,6 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var eventsFlyerImagePicker:
       UIImageView!
     @IBAction func imageSelector(_ sender: Any) {
-        
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-//            let imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-//            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-//            imagePicker.allowsEditing = true
-//            self.present(imagePicker, animated: true, completion: nil)
-//    }
-        
-        
         
         
         imagePicker.allowsEditing = false
@@ -57,12 +48,31 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
  eventsRef = Database.database().reference()
+        
+        
+      
+
+        
+        
       
         imagePicker.delegate = self
         
+     eventsLocation.dataDetectorTypes = (UIDataDetectorTypes.all)
+        
+     eventsTitleTextField.dataDetectorTypes = (UIDataDetectorTypes.all)
         
         
-    
+        eventsTitleTextField.isEditable = true
+        eventsTitleTextField.isSelectable = true
+        eventsTitleTextField.isUserInteractionEnabled = true
+        
+        eventsLocation.isEditable = true
+        eventsLocation.isSelectable = true
+        eventsLocation.isUserInteractionEnabled = true
+        
+        
+        
+        
         
     }
     
@@ -87,7 +97,13 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     
     @IBAction func saveEventsButton(_ sender: Any) {
         
-        let eventsDates = DateFormatter.localizedString(from: eventDateSelector.date, dateStyle: DateFormatter.Style.full, timeStyle: DateFormatter.Style.short) as String
+      
+            
+        let A = DateFormatter.localizedString(from: eventDateSelector.date, dateStyle: DateFormatter.Style.full, timeStyle: DateFormatter.Style.none) as String
+        
+        let B = DateFormatter.localizedString(from: eventTimePicker.date, dateStyle: DateFormatter.Style.none, timeStyle: DateFormatter.Style.short) as String
+        
+        let eventsDates = "\(A)  at \(B)"
         
         print(eventsDates.description)
         
@@ -101,4 +117,5 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     
 
 }
+
 
