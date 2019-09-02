@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-music-folder-50@3x.png",
+      "filename" : "icons8-push-notifications-60@2x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icons8-push-notifications-60@3x.png",
       "scale" : "2x"
     },
     {

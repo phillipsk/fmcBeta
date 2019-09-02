@@ -13,6 +13,8 @@ class Mp3FeedViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     @IBOutlet weak var playButton: UIBarButtonItem!
     
+    
+    
     var images:[UIImageView] = []
     var titles:[String] = []
     var timestamps:[String] = []
@@ -25,6 +27,10 @@ class Mp3FeedViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playButton.isEnabled = false
+        playButton.tintColor = UIColor.clear
+        
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
