@@ -8,10 +8,13 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
 
 class EventsSelectorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextViewDelegate {
+    
 
     var eventsRef: DatabaseReference!
+    var eventImagesRef : DatabaseReference!
     
    
     
@@ -48,7 +51,8 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
  eventsRef = Database.database().reference()
-        
+  
+ eventImagesRef = Database.database().reference()
         
       
 
@@ -96,6 +100,19 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func saveEventsButton(_ sender: Any) {
+        let randomID = UUID.init().uuidString
+        let imageRef = Storage.storage().reference(withPath: "Events/\(randomID).jpg")
+        guard let eventsImageData = eventsFlyerImagePicker.image?.jpegData(compressionQuality: 0.75) else {return}
+        let uploadMetadata = StorageMetadata.init()
+        uploadMetadata.contentType = "image/jpeg"
+        
+        imageRef.putData(eventsImageData, metadata: uploadMetadata) { (downloadMetadata, error) in
+            if let error = error {
+                print("Something went wrong! \(error.localizedDescription)")
+            }
+            
+            
+        }
         
       
             
@@ -110,6 +127,8 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
         let eventSaved:[String: Any] = ["eventdate": eventsDates,"eventtitle":eventsTitleTextField.text!,"eventlocation":eventsLocation.text!]
         
         eventsRef.child("Church Events").childByAutoId().setValue(eventSaved)
+        
+        
         
         self.dismiss(animated: true, completion: nil)
     

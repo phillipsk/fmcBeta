@@ -24,7 +24,7 @@ class PrayerWallPostViewController: UIViewController, UITextViewDelegate {
 
         prayerRef = Database.database().reference()
         
-        prayerPostText.text = "Type yout prayer request here"
+        prayerPostText.text = "Type your prayer request here"
         prayerPostText.textColor = UIColor.lightGray
         prayerPostText.font = UIFont(name: "verdana", size: 13.0)
         prayerPostText.returnKeyType = .done
@@ -35,7 +35,7 @@ class PrayerWallPostViewController: UIViewController, UITextViewDelegate {
     //MARK:- UITextViewDelegates
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Type yout prayer request here" {
+        if textView.text == "Type your prayer request here" {
             textView.text = ""
             textView.textColor = UIColor.black
             textView.font = UIFont(name: "verdana", size: 16.0)
@@ -51,7 +51,7 @@ class PrayerWallPostViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
-            textView.text = "Type yout prayer request here"
+            textView.text = "Type your prayer request here"
             textView.textColor = UIColor.lightGray
             textView.font = UIFont(name: "verdana", size: 13.0)
         }
@@ -62,8 +62,9 @@ class PrayerWallPostViewController: UIViewController, UITextViewDelegate {
     @IBAction func didPostPrayerRequest(_ sender: Any) {
         
        
-        
         var userInfo = Auth.auth().currentUser?.displayName
+        
+        
         
         if privacyFilter.isOn {
             userInfo? = "Anonymous"
