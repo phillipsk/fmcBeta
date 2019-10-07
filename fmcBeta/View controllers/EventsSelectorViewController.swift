@@ -37,11 +37,30 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
       UIImageView!
     @IBAction func imageSelector(_ sender: Any) {
         
+//
+//        imagePicker.allowsEditing = false
+//        imagePicker.sourceType = .photoLibrary
+//
+//        present(imagePicker, animated: true, completion: nil)
+//
+//
         
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
+        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            self.openCamera()
+        }))
         
-        present(imagePicker, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+            self.openGallery()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+        
         
         
         
@@ -80,6 +99,44 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
         
     }
     
+    
+    func openCamera()
+    {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        else
+        {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    
+    func openGallery()
+    {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        else
+        {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have permission to access gallery.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
 
     
     @IBAction func dismissEventsOrganizer(_ sender: Any) {
@@ -108,6 +165,7 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
         
         imageRef.putData(eventsImageData, metadata: uploadMetadata) { (downloadMetadata, error) in
             if let error = error {
+                
                 print("Something went wrong! \(error.localizedDescription)")
             }
             

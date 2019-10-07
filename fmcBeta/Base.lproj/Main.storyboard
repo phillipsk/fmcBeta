@@ -1212,6 +1212,7 @@
                                             <outlet property="eventDate" destination="V9l-zK-mLE" id="s1d-gE-M0Z"/>
                                             <outlet property="eventLocation" destination="ABx-Dn-Pa7" id="XTI-tE-gah"/>
                                             <outlet property="eventTitle" destination="rTZ-6l-5sG" id="Z4W-gh-D40"/>
+                                            <outlet property="flyerImages" destination="Ec9-1P-oPQ" id="Tmd-jh-6d7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

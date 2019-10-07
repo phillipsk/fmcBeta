@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseDatabase
 
 class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventLocation: UITextView!
     @IBOutlet weak var eventDate: UITextView!
     @IBOutlet weak var eventTitle: UITextView!
+    @IBOutlet weak var flyerImages: UIImageView!
+    
+    
+    
+    
     
     
     func detector() {

@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		47E8F330E814F68261B267CB /* Pods_fmcBetaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7453D9D1FC39F0E9A53ABBB0 /* Pods_fmcBetaTests.framework */; };
 		593E24BAD6292A3CAC47D51E /* Pods_fmcBetaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98C70BFEFF38AD39E87A742 /* Pods_fmcBetaUITests.framework */; };
 		968B613E38BE55E448802EC3 /* Pods_fmcBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BA46734B1C52F3A2D1AC28 /* Pods_fmcBeta.framework */; };
+		A62128DD233FD99800C91959 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62128DC233FD99800C91959 /* ImageService.swift */; };
+		A62128DE233FD99800C91959 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62128DC233FD99800C91959 /* ImageService.swift */; };
+		A62128DF233FD99800C91959 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62128DC233FD99800C91959 /* ImageService.swift */; };
+		A62128E1233FE02200C91959 /* downloadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62128E0233FE02200C91959 /* downloadURL.swift */; };
+		A62128E2233FE02200C91959 /* downloadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62128E0233FE02200C91959 /* downloadURL.swift */; };
+		A62128E3233FE02200C91959 /* downloadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62128E0233FE02200C91959 /* downloadURL.swift */; };
 		A63ECF7422FE5DCF00DD300A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */; };
 		A63ECF7522FE5DCF00DD300A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */; };
 		A63ECF7622FE5DCF00DD300A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */; };
@@ -100,6 +106,8 @@
 		7453D9D1FC39F0E9A53ABBB0 /* Pods_fmcBetaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fmcBetaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FC122C4B7C8D1F9B58A7E3 /* Pods-fmcBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBeta.release.xcconfig"; path = "Target Support Files/Pods-fmcBeta/Pods-fmcBeta.release.xcconfig"; sourceTree = "<group>"; };
 		9C4DDA53A8F9438032D3B6A4 /* Pods-fmcBetaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmcBetaUITests.release.xcconfig"; path = "Target Support Files/Pods-fmcBetaUITests/Pods-fmcBetaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A62128DC233FD99800C91959 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		A62128E0233FE02200C91959 /* downloadURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = downloadURL.swift; sourceTree = "<group>"; };
 		A63ECF7322FE5DCF00DD300A /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		A63ECF7B22FF519500DD300A /* EventsSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSelectorViewController.swift; sourceTree = "<group>"; };
 		A65876E22314ED0D00B68690 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
@@ -230,7 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				AB41084822E15B9B00511D0C /* Date Model.swift */,
+				A62128E0233FE02200C91959 /* downloadURL.swift */,
 				ABDB50C322F7BC29002AB8A0 /* UserService.swift */,
+				A62128DC233FD99800C91959 /* ImageService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -556,11 +566,13 @@
 				A63ECF7422FE5DCF00DD300A /* EventsViewController.swift in Sources */,
 				AB8361CD22A077BE0049DA07 /* AppDelegate.swift in Sources */,
 				AB03481722A98E9D00A86E85 /* ComposeViewController.swift in Sources */,
+				A62128DD233FD99800C91959 /* ImageService.swift in Sources */,
 				A63ECF7C22FF519500DD300A /* EventsSelectorViewController.swift in Sources */,
 				ABDB50C422F7BC29002AB8A0 /* UserService.swift in Sources */,
 				ABA86CA622D9324100EBC5EF /* AudioMgmtViewController.swift in Sources */,
 				AB41084922E15B9B00511D0C /* Date Model.swift in Sources */,
 				A65876E32314ED0D00B68690 /* EventsTableViewCell.swift in Sources */,
+				A62128E1233FE02200C91959 /* downloadURL.swift in Sources */,
 				AB1714A622F3DD720092593C /* PrayerWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +586,7 @@
 				AB1D72C722F28390009258A5 /* ChurchInfoViewController.swift in Sources */,
 				AB03481822A98E9D00A86E85 /* ComposeViewController.swift in Sources */,
 				AB41084A22E15B9B00511D0C /* Date Model.swift in Sources */,
+				A62128DE233FD99800C91959 /* ImageService.swift in Sources */,
 				AB14B22822D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */,
 				AB03481422A98E8C00A86E85 /* FeedViewController.swift in Sources */,
 				AB1714AF22F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
@@ -587,6 +600,7 @@
 				AB1714A722F3DD720092593C /* PrayerWallViewController.swift in Sources */,
 				A65876F02319BDB600B68690 /* TestViewController.swift in Sources */,
 				A63ECF7522FE5DCF00DD300A /* EventsViewController.swift in Sources */,
+				A62128E2233FE02200C91959 /* downloadURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +613,7 @@
 				AB1D72C822F28390009258A5 /* ChurchInfoViewController.swift in Sources */,
 				AB03481922A98E9D00A86E85 /* ComposeViewController.swift in Sources */,
 				AB41084B22E15B9B00511D0C /* Date Model.swift in Sources */,
+				A62128DF233FD99800C91959 /* ImageService.swift in Sources */,
 				AB14B22922D7D7A7006AFFE3 /* CustomTableViewCell.swift in Sources */,
 				AB03481522A98E8C00A86E85 /* FeedViewController.swift in Sources */,
 				AB1714B022F3DDCF0092593C /* PrayerWallTableViewCell.swift in Sources */,
@@ -612,6 +627,7 @@
 				AB1714A822F3DD720092593C /* PrayerWallViewController.swift in Sources */,
 				A65876F12319BDB600B68690 /* TestViewController.swift in Sources */,
 				A63ECF7622FE5DCF00DD300A /* EventsViewController.swift in Sources */,
+				A62128E3233FE02200C91959 /* downloadURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
