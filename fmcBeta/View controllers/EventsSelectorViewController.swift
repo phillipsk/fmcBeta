@@ -106,7 +106,7 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
         else
@@ -137,24 +137,27 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
         }
     }
     
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            eventsFlyerImagePicker.contentMode = .scaleAspectFit
+            eventsFlyerImagePicker.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func dismissEventsOrganizer(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
     }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            eventsFlyerImagePicker.contentMode = .scaleAspectFit
-            eventsFlyerImagePicker.image = pickedImage
-        }
-        
-        dismiss(animated: true, completion: nil)
-    }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
+    
+    
+    
     
     @IBAction func saveEventsButton(_ sender: Any) {
         

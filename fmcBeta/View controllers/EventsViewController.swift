@@ -113,8 +113,11 @@ class EventsViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell.eventTitle.text = event.title
         cell.eventDate.text =  event.timestamp
         cell.eventLocation.text = event.location
+      
         cell.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         return cell
+        
+        
     }
     
 
@@ -156,6 +159,8 @@ class EventsViewController: UIViewController,UITableViewDelegate,UITableViewData
         }
         
     }
+    
+    
 
 }
 
