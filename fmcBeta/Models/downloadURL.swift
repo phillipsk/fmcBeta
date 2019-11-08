@@ -15,7 +15,7 @@
 //func url()  {
 //    
 //    
-//    var strURL = ""
+//    
 //    let randomID = UUID.init().uuidString
 //    let imageRef = Storage.storage().reference(withPath: "Events/\(randomID).jpg")
 //   // guard let eventsImageData = eventsFlyerImagePicker.image?.jpegData(compressionQuality: 0.75) else {return}

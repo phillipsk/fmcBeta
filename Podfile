@@ -24,5 +24,7 @@ pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'GoogleAnalytics'
 pod 'Firebase/Storage'
+pod 'Kingfisher'
+
 
 end

@@ -157,6 +157,8 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func saveEventsButton(_ sender: Any) {
+        
+        
         let randomID = UUID.init().uuidString
         let imageRef = Storage.storage().reference(withPath: "Events/\(randomID).jpg")
         guard let eventsImageData = eventsFlyerImagePicker.image?.jpegData(compressionQuality: 0.75) else {return}
@@ -169,23 +171,41 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
                 print("Something went wrong! \(error.localizedDescription)")
             }
             
+            imageRef.downloadURL(completion: { (url, error) in
+                if let error = error {
+                    
+                    print("Something went wrong! \(error.localizedDescription)")
+                    
+                   
+                    
+                    return
+                }
+                
+                if  let url = url?.absoluteString{
+                     print(url)
+                
             
+                    let A = DateFormatter.localizedString(from: self.eventDateSelector.date, dateStyle: DateFormatter.Style.full, timeStyle: DateFormatter.Style.none) as String
+                    
+                    let B = DateFormatter.localizedString(from: self.eventTimePicker.date, dateStyle: DateFormatter.Style.none, timeStyle: DateFormatter.Style.short) as String
+                    
+                    let eventsDates = "\(A) @\(B)"
+                    
+                    print(eventsDates.description)
+                    
+                    let eventSaved:[String: Any] = ["eventdate": eventsDates,"eventtitle":self.eventsTitleTextField.text!,"eventlocation":self.eventsLocation.text!,"ImageUrl":url]
+                    
+                    self.eventsRef.child("Church Events").childByAutoId().setValue(eventSaved)
+                    
+                    
+                    
+                }
+            })
         }
         
       
             
-        let A = DateFormatter.localizedString(from: eventDateSelector.date, dateStyle: DateFormatter.Style.full, timeStyle: DateFormatter.Style.none) as String
-        
-        let B = DateFormatter.localizedString(from: eventTimePicker.date, dateStyle: DateFormatter.Style.none, timeStyle: DateFormatter.Style.short) as String
-        
-        let eventsDates = "\(A) @\(B)"
-        
-        print(eventsDates.description)
-        
-        let eventSaved:[String: Any] = ["eventdate": eventsDates,"eventtitle":eventsTitleTextField.text!,"eventlocation":eventsLocation.text!]
-        
-        eventsRef.child("Church Events").childByAutoId().setValue(eventSaved)
-        
+       
         
         
         self.dismiss(animated: true, completion: nil)
