@@ -26,6 +26,7 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var eventTimePicker: UIDatePicker!
     @IBOutlet weak var eventsLocation: UITextView!
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     @IBAction func eventsDateSelector(_ sender: Any) {
         
@@ -61,43 +62,120 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
         
         
         
-        
-        
-        
-        
-        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- eventsRef = Database.database().reference()
+        
+        
+        eventsTitleTextField.text = "Events Title"
+        eventsTitleTextField.textColor = UIColor.lightGray
+        eventsTitleTextField.delegate = self
+        
+        
+        eventsLocation.text = "Events Location"
+        eventsLocation.textColor = UIColor.lightGray
+        eventsLocation.delegate = self
+        
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(EventsSelectorViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        
+//        NotificationCenter.default.addObserver(self, selector: #selector(EventsSelectorViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
+        
+        
+        eventsRef = Database.database().reference()
   
- eventImagesRef = Database.database().reference()
+        eventImagesRef = Database.database().reference()
         
-      
-
-        
-        
+    
       
         imagePicker.delegate = self
         
-     eventsLocation.dataDetectorTypes = (UIDataDetectorTypes.all)
+        eventsLocation.dataDetectorTypes = (UIDataDetectorTypes.all)
         
-     eventsTitleTextField.dataDetectorTypes = (UIDataDetectorTypes.all)
+        eventsTitleTextField.dataDetectorTypes = (UIDataDetectorTypes.all)
         
         
         eventsTitleTextField.isEditable = true
         eventsTitleTextField.isSelectable = true
         eventsTitleTextField.isUserInteractionEnabled = true
         
+        
         eventsLocation.isEditable = true
         eventsLocation.isSelectable = true
         eventsLocation.isUserInteractionEnabled = true
         
         
-        
-        
+    }
+    
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if eventsTitleTextField.textColor == UIColor.lightGray {
+            eventsTitleTextField.text = nil
+            eventsTitleTextField.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if eventsTitleTextField.text.isEmpty {
+            eventsTitleTextField.text = "Event Title"
+            eventsTitleTextField.textColor = UIColor.lightGray
+        }
+    }
+    
+    
+    func locationTextViewDidBeginEditing(_ textView: UITextView) {
+        if eventsLocation.textColor == UIColor.lightGray {
+            eventsLocation.text = nil
+            eventsLocation.textColor = UIColor.black
+        }
+    }
+    
+    func locationTextViewDidEndEditing(_ textView: UITextView) {
+        if eventsLocation.text.isEmpty {
+            eventsLocation.text = "Event Location"
+            eventsLocation.textColor = UIColor.lightGray
+        }
+    }
+    
+    
+    
+    
+    
+    
+    func adjustingHeight(show:Bool, notification:NSNotification) {
+        // 1
+        var userInfo = notification.userInfo!
+        // 2
+        let keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        // 3
+        let animationDurarion = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        // 4
+        let changeInHeight = keyboardFrame.height
+            
+            //(CGRectGetHeight(keyboardFrame) + 40) * (show ? 1 : -1)
+        //5
+        UIView.animate(withDuration: animationDurarion, animations: { () -> Void in
+            self.bottomConstraint.constant += changeInHeight
+        })
         
     }
+    
+    
+
+    
+    
+    @objc func keyboardWillShow(notification:NSNotification) {
+        adjustingHeight(show: true, notification: notification)
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification) {
+        adjustingHeight(show: false, notification: notification)
+    }
+    
+    
     
     
     func openCamera()
@@ -215,7 +293,14 @@ class EventsSelectorViewController: UIViewController, UIImagePickerControllerDel
     
     }
     
-
+//    override func viewWillDisappear(_ animated: Bool) {
+//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+//    }
+    
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
 }
 
 

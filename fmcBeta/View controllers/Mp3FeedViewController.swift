@@ -58,7 +58,7 @@ class Mp3FeedViewController: UIViewController,UITableViewDelegate,UITableViewDat
     mp3FeedTableView.delegate = self
     mp3FeedTableView.dataSource = self
     
-    let urlString:String = "http://fellowshipmission.church/mp3/api.php"
+    let urlString:String = "http://god.works/mp3/api.php"
     let formattedUrl = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url:URL = URL(string: formattedUrl!)!
     let task = URLSession.shared.dataTask(with: url) { (data, response, err) in

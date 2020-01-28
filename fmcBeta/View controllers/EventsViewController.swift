@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import SVProgressHUD
 
 class EventsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
@@ -102,6 +103,12 @@ class EventsViewController: UIViewController,UITableViewDelegate,UITableViewData
      
 }
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        SVProgressHUD.show(withStatus: "Loading")
+//        SVProgressHUD.dismiss(withDelay: 10, completion: {print("complete")})
+//        
+//    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
@@ -114,10 +121,13 @@ class EventsViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell.eventDate.text =  event.timestamp
         cell.eventLocation.text = event.location
       
+        
+        
         cell.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         return cell
+//       12 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.75)
         
-        
+    
     }
     
 

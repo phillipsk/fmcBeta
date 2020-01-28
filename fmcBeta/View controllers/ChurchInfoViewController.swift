@@ -35,7 +35,7 @@ class ChurchInfoViewController: UIViewController {
         
         let placemark = MKPlacemark(coordinate: coordinates)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "Fellowship Mission Church"
+        mapItem.name = "Mission Church"
         mapItem.openInMaps(launchOptions: options)
     }
     

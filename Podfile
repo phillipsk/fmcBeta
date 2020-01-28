@@ -25,6 +25,7 @@ pod 'GoogleSignIn'
 pod 'GoogleAnalytics'
 pod 'Firebase/Storage'
 pod 'Kingfisher'
+pod 'SVProgressHUD'
 
 
 end
