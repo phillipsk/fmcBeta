@@ -23,6 +23,9 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'GoogleAnalytics'
+pod 'Firebase/Storage'
+pod 'Kingfisher'
+pod 'SVProgressHUD'
 
 
 end

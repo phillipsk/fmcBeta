@@ -8,18 +8,28 @@
 
 import Foundation
 import GoogleSignIn
+import FirebaseAuth
 
-struct guid {
-    var fullName: String!
-    //var email: String!
-    mutating func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
+func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
-            fullName = user.profile.name as String
-           // email = user.profile.email as String
-    
+      var GIDUser =    user.profile.name as String
+            
+            guard let authentication = user.authentication else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                           accessToken: authentication.accessToken)
+            Auth.auth().signIn(with: credential) { (GIDUser, error) in
+                if let err = error {
+                    print("Failed Auth",err)
+                    return
+                }
+                
+            }
 }
+    
+    
 
 }
-}
+
+

@@ -8,27 +8,33 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
+import GoogleSignIn
 
 class PrayerWallViewController:UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var composeButton: UIBarButtonItem!
     
    var prayerRef: DatabaseReference?
     var prayerDatabaseHandle:DatabaseHandle?
     
     var prayerRequest = [String]()
     var prayerTimestamps:[NSDate] = []
-    var userNameLabel = [String]()
+    var userName = [String]()
+    var didLike = false
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+
         
         prayerRef = Database.database().reference()
         
         tableView.reloadData()
         
         tableView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi)
-        
         
         
         tableView.delegate = self
@@ -50,7 +56,7 @@ class PrayerWallViewController:UIViewController,UITableViewDelegate,UITableViewD
           //  [""] as! String)
             
             
-            
+            self.userName.append(prayPost["username"] as! String)
             
             
         self.prayerRequest.append(prayPost["prayer"] as! String)
@@ -69,9 +75,17 @@ class PrayerWallViewController:UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Prayer") as! PrayerWallTableViewCell
+        
+     
 
         
+    cell.prayerRequestLabel.lineBreakMode = .byWordWrapping
+    cell.prayerRequestLabel.numberOfLines = 8
+        
     cell.prayerRequestLabel.text = prayerRequest[indexPath.row]
+        
+    cell.userNameLabel.text! = userName[indexPath.row]
+    
         
         let prayTempTimestamp:NSDate = prayerTimestamps[indexPath.row]
         let prayTimestampDate:Date = prayTempTimestamp as Date

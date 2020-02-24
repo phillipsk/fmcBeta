@@ -11,7 +11,7 @@ import FirebaseDatabase
 import FirebaseAuth
 import GoogleSignIn
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var textView: UITextView!
     var ref:DatabaseReference?
@@ -24,13 +24,33 @@ class ComposeViewController: UIViewController {
         super.viewDidLoad()
 ref = Database.database().reference()
         
-        
-
+        textView.text = "Please typer here"
+        textView.textColor = UIColor.lightGray
+        textView.delegate = self
         
 }
+   
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Please typer here"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
     
     @IBAction func addPost(_ sender: Any) {
-        let objectToSave: [String: Any] = ["date": [".sv":"timestamp"], "text": textView.text]
+        
+    
+        
+        let objectToSave: [String: Any] = ["date": [".sv":"timestamp"], "text": textView.text, ]
         
         
         

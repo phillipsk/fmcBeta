@@ -13,7 +13,8 @@ import Firebase
 
 class FeedViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
-// @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet weak var announcementsComposer: UIBarButtonItem!
+    // @IBOutlet weak var timeStamp: UILabel!
        var ref: DatabaseReference?
        var databaseHandle:DatabaseHandle?
 
@@ -24,7 +25,18 @@ class FeedViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     
 override func viewDidLoad() {
         super.viewDidLoad()
+    
+    if (Auth.auth().currentUser!.displayName != "Neil Leon")  {
+        self.announcementsComposer.tintColor = UIColor.clear
+        self.announcementsComposer.isEnabled = false
         
+    }
+    else{
+        
+        self.announcementsComposer.isEnabled = true
+    }
+    
+    
 //Set the Firebase reference
     ref = Database.database().reference()
         
