@@ -74,10 +74,10 @@ class AudioMgmtViewController: UIViewController {
         
         if playButton.isSelected == true {
         playButton.isSelected = false
-        playButton.setImage(UIImage(named : "play"), for: UIControl.State.normal)
+        playButton.setImage(UIImage(named : "play"), for: UIControlState.normal)
         }else {
         playButton.isSelected = true
-        playButton.setImage(UIImage(named : "pause"), for: UIControl.State.selected)
+        playButton.setImage(UIImage(named : "pause"), for: UIControlState.selected)
     }
         
 

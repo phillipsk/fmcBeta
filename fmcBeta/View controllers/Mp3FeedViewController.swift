@@ -27,7 +27,7 @@ class Mp3FeedViewController: UIViewController,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, mode: AVAudioSessionModeDefault, options: [.mixWithOthers, .allowAirPlay])
             print("Playback OK")
             try AVAudioSession.sharedInstance().setActive(true)
             print("Session is Active")
@@ -139,7 +139,7 @@ class Mp3FeedViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @objc func seekToPoint(notification: NSNotification) {
         
     if let val = notification.userInfo?["value"] as? Int64 {
-    let targetTime:CMTime = CMTimeMake(value: val, timescale: 1)
+        let targetTime:CMTime = CMTimeMake(val, 1)
             
     player!.seek(to: targetTime)
     if player!.rate == 0
@@ -235,7 +235,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     let playerItem = AVPlayerItem(url: url!)
 
     self.player = try AVPlayer(playerItem:playerItem)
-        self.player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: DispatchQueue.main) { (CMTime) -> Void in
+        self.player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, 1), queue: DispatchQueue.main) { (CMTime) -> Void in
             if self.player!.currentItem?.status == .readyToPlay {
                 var timeDict:[String:Float64]
                 let time:Float64 = CMTimeGetSeconds(self.player!.currentTime())
@@ -277,8 +277,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     let newTime = playerCurrentTime + 15.0
             
     if newTime < (CMTimeGetSeconds(duration) - 15.0) {
-    let time2: CMTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
-    player.seek(to: time2, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
+        let time2: CMTime = CMTimeMake(Int64(newTime * 1000 as Float64), 1000)
+    player.seek(to: time2, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
     player.play()
     }
             
@@ -314,8 +314,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     if newTime < 0 {
     newTime = 0
     }
-    let time2: CMTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
-    player.seek(to: time2, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
+        let time2: CMTime = CMTimeMake(Int64(newTime * 1000 as Float64), 1000)
+    player.seek(to: time2, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
     player.play()
     }
     }

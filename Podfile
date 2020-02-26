@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '12.1'
+ platform :ios, '11.1'
 
 target 'fmcBeta' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -17,12 +17,18 @@ target 'fmcBeta' do
     # Pods for testing
   end
 
-pod 'Firebase/Core'
-pod 'Firebase/Analytics'
-pod 'Firebase/Database'
-pod 'Firebase/Auth'
+#pod 'AFNetworking', '~> 3.0'
+pod 'Firebase/Core', '~> 5.6.0'
+pod 'Firebase/Analytics', '~> 5.6.0'
+pod 'Firebase/Database', '~> 5.6.0'
+pod 'Firebase/Auth', '~> 5.6.0'
 pod 'GoogleSignIn'
 pod 'GoogleAnalytics'
 
+# AWS Pods
+ #pod 'amplify-tools'
 
+ #pod 'Amplify'
+ #pod 'AWSPluginsCore'
+ #pod 'AmplifyPlugins/AWSAPIPlugin'
 end
